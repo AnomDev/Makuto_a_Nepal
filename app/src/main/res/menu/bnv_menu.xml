@@ -5,7 +5,8 @@
     <item
         android:id="@+id/navHomeFragment"
         android:icon="@drawable/ic_home"
-        android:title="@string/home" />
+        android:title="@string/home"
+        />
     <item
         android:id="@+id/navMapFragment"
         android:icon="@drawable/ic_map"
