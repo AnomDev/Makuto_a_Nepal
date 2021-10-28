@@ -12,12 +12,16 @@
         <!-- Accent brand color. -->
         <item name="colorAccent">@color/accent</item>
 
+        <!-- Menu bottom bar color -->
+        <item name="actionMenuTextColor">@color/accent_dark</item>
+
+
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnSecondary</item>
 
         <!-- Navigation bar color. -->
-        <item name="android:navigationBarColor">@color/secondary_dark</item>
+        <item name="android:navigationBarColor">@color/black</item>
 
         <!-- Customize your theme here. -->
         <item name="android:windowFullscreen">false</item>
@@ -28,4 +32,10 @@
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splashscreen_background</item>
     </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/accent</item>
+        <item name="android:textColorSecondary">@color/accent_light</item>
+        <item name="android:textColor">@color/accent_dark</item>
+    </style>`
 </resources>

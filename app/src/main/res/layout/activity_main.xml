@@ -5,45 +5,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <!--<com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Toolbar
-            android:id="@+id/toolbarMain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/heightToolbar"
-                android:src="@drawable/ic_association"/>
-
-        </Toolbar>
-    </com.google.android.material.appbar.AppBarLayout>-->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:background="@drawable/gradient_background">
 
-        <!-- <fragment
-             android:id="@+id/fragContent"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:layout_above="@id/bnvMenu"
-             app:navGraph="@navigation/nav_graph"
-             app:defaultNavHost="true"/>-->
+
+       <!-- TODO: Implementar un nav_host_fragment (aunque no sepa muy bien para qué)
+
+       <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.HomeFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav_menu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:navGraph="@navigation/main_navigation" />-->
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bnvMenu"
+            android:id="@+id/bottom_nav_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
 
+            app:theme="@style/ToolbarTheme"
+            app:itemIconTint="@drawable/bottom_nav_item_color"
+            app:itemTextColor="@drawable/bottom_nav_item_color"
             android:background="@color/primary_light"
             app:itemRippleColor="@color/secondary_dark"
-            app:itemTextColor="@color/secondary_dark"
             app:menu="@menu/bnv_menu"/>
     </RelativeLayout>
 
