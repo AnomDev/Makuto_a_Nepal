@@ -1,4 +1,4 @@
-package com.anomdev.nepaltruism.ui.fragments
+package com.anomdev.nepaltruism.ui.fragments.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
