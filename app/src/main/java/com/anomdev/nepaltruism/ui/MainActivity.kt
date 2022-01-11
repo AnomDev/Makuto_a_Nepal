@@ -17,6 +17,7 @@ import com.anomdev.nepaltruism.R
 import com.anomdev.nepaltruism.databinding.ActivityMainBinding
 import com.anomdev.nepaltruism.ui.fragments.AssociationsDetailFragment
 import com.anomdev.nepaltruism.ui.fragments.AssociationsListFragment
+import com.anomdev.nepaltruism.ui.fragments.CountryFragment
 import com.anomdev.nepaltruism.ui.fragments.MapFragment
 import com.anomdev.nepaltruism.ui.fragments.home.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     //    private lateinit var navController: NavController
     private val homeFragment = HomeFragment()
+    private val countryFragment = CountryFragment()
     private val mapFragment = MapFragment()
     private val associationsFragment = AssociationsListFragment()
 
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavMenu.setOnNavigationItemSelectedListener {
             when (it.itemId){
                 R.id.menuitem_home -> replaceFragment(homeFragment)
+                R.id.menuitem_country -> replaceFragment(countryFragment)
                 R.id.menuitem_associations -> replaceFragment(associationsFragment)
                 R.id.menuitem_map -> replaceFragment(mapFragment)
 

@@ -6,6 +6,13 @@
         android:icon="@drawable/ic_home"
         android:title="@string/home"
         />
+
+    <item
+        android:id="@+id/menuitem_country"
+        android:icon="@drawable/ic_country"
+        android:title="@string/country_name"
+        />
+
     <item
         android:id="@+id/menuitem_associations"
         android:icon="@drawable/ic_association"

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
     android:opacity="opaque">
-    <item android:drawable="@drawable/gradient_background"/>
+    <item
+        android:gravity="fill"
+        android:drawable="@drawable/silk_sea"
+        />
     <item
         android:left="10dp"
         android:right="10dp"
         android:top="260dp"
         android:bottom="260dp"
         android:gravity="fill_vertical">
-        <bitmap android:src="@drawable/splash_logo_translucid" />
+        <bitmap android:src="@drawable/makutonepal_splash" />
     </item>
 </layer-list>
