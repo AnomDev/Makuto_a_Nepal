@@ -1,4 +1,4 @@
-package com.anomdev.nepaltruism
+package com.anomdev.makutoanepal
 
 import org.junit.Test
 

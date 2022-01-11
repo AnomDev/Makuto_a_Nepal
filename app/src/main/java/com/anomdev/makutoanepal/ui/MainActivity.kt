@@ -1,26 +1,15 @@
-package com.anomdev.nepaltruism.ui
+package com.anomdev.makutoanepal.ui
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.setupWithNavController
-import com.anomdev.nepaltruism.R
-import com.anomdev.nepaltruism.databinding.ActivityMainBinding
-import com.anomdev.nepaltruism.ui.fragments.AssociationsDetailFragment
-import com.anomdev.nepaltruism.ui.fragments.AssociationsListFragment
-import com.anomdev.nepaltruism.ui.fragments.CountryFragment
-import com.anomdev.nepaltruism.ui.fragments.MapFragment
-import com.anomdev.nepaltruism.ui.fragments.home.HomeFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.anomdev.makutoanepal.R
+import com.anomdev.makutoanepal.databinding.ActivityMainBinding
+import com.anomdev.makutoanepal.ui.fragments.AssociationsDetailFragment
+import com.anomdev.makutoanepal.ui.fragments.AssociationsListFragment
+import com.anomdev.makutoanepal.ui.fragments.CountryFragment
+import com.anomdev.makutoanepal.ui.fragments.MapFragment
+import com.anomdev.makutoanepal.ui.fragments.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 

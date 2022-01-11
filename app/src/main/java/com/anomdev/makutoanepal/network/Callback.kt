@@ -1,4 +1,4 @@
-package com.anomdev.nepaltruism.network
+package com.anomdev.makutoanepal.network
 
 import java.lang.Exception
 

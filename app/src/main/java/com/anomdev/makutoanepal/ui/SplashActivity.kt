@@ -1,4 +1,4 @@
-package com.anomdev.nepaltruism.ui
+package com.anomdev.makutoanepal.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
