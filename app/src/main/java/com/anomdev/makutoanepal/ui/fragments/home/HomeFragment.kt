@@ -14,21 +14,25 @@ import com.anomdev.makutoanepal.model.BlogPost
 val postsOnFeed = listOf(
     BlogPost(
         "https://www.publico.es/uploads/2016/05/18/573c0f92e7307.jpg",
-        "Carlos Soria: Voy a intentar no hardcodear textos"
+        "Carlos Soria: Voy a intentar no hardcodear textos",
+        "12/01/2022"
     ),
     BlogPost(
         "https://www.excelenciasdelmotor.com/sites/default/files/inline-images/lukla2.jpg",
-        "Lukla, el aeropuerto más peligroso del mundo (?)"
+        "Lukla, el aeropuerto más peligroso del mundo (?)",
+        "19/12/2021"
     ),
 
     BlogPost(
-        "https://www.explorenepal.com/info/world_heritage_sites/images/swayambhu_stupa.jpg",
-        "Budismo e Hinduismo en Nepal"
+        "https://www.mochileandoporasia.com/wp-content/uploads/2018/12/Kathmandu-2.jpg",
+        "Budismo e Hinduismo en Nepal: juntos pero no revueltos",
+        "07/12/2021"
     ),
 
     BlogPost(
-        "https://cursokotlin.com/wp-content/uploads/2017/07/spiderman.jpg",
-        "Imagen funcional 100%"
+        "https://www.spotlightnepal.com/media/images/Nekapaa-70th-Anniversary-1-2.2e16d0ba.fill-650x500.jpg",
+        "Los maoístas suben al poder en coalición con el partido congresista",
+        "20/11/2021"
     )
 
 
@@ -38,11 +42,6 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

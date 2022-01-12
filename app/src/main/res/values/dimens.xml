@@ -15,7 +15,9 @@
 
     <!-- Texts -->
     <dimen name="titleSize">40sp</dimen>
-    <dimen name="subtitleSize">20sp</dimen>
+    <dimen name="subtitleSize">24sp</dimen>
+    <dimen name="dateSize">16sp</dimen>
+
 
 
 </resources>

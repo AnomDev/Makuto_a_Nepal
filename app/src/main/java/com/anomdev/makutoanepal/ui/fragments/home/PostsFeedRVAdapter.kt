@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.FragmentHomeBinding
+import com.anomdev.makutoanepal.databinding.ItemBlogPostBinding
 import com.anomdev.makutoanepal.model.BlogPost
+import com.squareup.picasso.Picasso
 
 
 class PostsFeedRVAdapter (val feedList:List<BlogPost>): RecyclerView.Adapter<PostsFeedRVAdapter.PostHolder>(){
@@ -12,7 +14,7 @@ class PostsFeedRVAdapter (val feedList:List<BlogPost>): RecyclerView.Adapter<Pos
 
     //Éste método crea el ViewHolder, en este caso el PostHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostHolder {
-        val binding = FragmentHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemBlogPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PostHolder(binding)
     }
 
@@ -28,11 +30,14 @@ class PostsFeedRVAdapter (val feedList:List<BlogPost>): RecyclerView.Adapter<Pos
 
 
 
-    class PostHolder(private val binding : FragmentHomeBinding): RecyclerView.ViewHolder(binding.root){
+    class PostHolder(private val binding : ItemBlogPostBinding): RecyclerView.ViewHolder(binding.root){
 
         fun render(feedList: BlogPost) {
-            binding.titleTv.text = feedList.title
-//            Picasso.get().load(feedList.image).into( (view as ItemBlogPostBinding).ivPost)
+            binding.tvTitle.text = feedList.title
+            Picasso.get().load(feedList.image).into(binding.ivPost)
+            binding.tvDate.text = feedList.date
+
+
         }
     }
 

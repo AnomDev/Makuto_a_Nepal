@@ -17,7 +17,8 @@
         <activity
             android:name="com.anomdev.makutoanepal.ui.SplashActivity"
             android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

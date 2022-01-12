@@ -4,5 +4,5 @@
     <string name="map">Mapa</string>
     <string name="home">Inicio</string>
     <string name="news">Noticias</string>
-    <string name="new_description_tv"><b>Carlos Soria</b>: \"Voy a volver a intentar el Dhaulagiri en Marzo de 2022\"</string>
+    <string name="default_text">Este es un texto predeterminado que será reemplazado posteriormente</string>
 </resources>
