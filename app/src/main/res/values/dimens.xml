@@ -9,14 +9,13 @@
     <!-- Margins -->
     <dimen name="marginDefault">10dp</dimen>
     <dimen name="marginNewCardViewToParent">20dp</dimen>
-    <dimen name="marginTextDescriptionInsideNewCardView">4dp</dimen>
+    <dimen name="paddingTextDescriptionInsideNewCardView">8dp</dimen>
+
 
 
     <!-- Texts -->
     <dimen name="titleSize">40sp</dimen>
-    <dimen name="subtitleSize">15sp</dimen>
-    <dimen name="itemAssociationsTitle">30sp</dimen>
-    <dimen name="itemAssociationsSubtitle">20sp</dimen>
+    <dimen name="subtitleSize">20sp</dimen>
 
 
 </resources>

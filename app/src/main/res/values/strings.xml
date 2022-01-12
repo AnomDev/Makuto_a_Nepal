@@ -7,8 +7,8 @@
     <string name="ngos">NGOs</string>
     <string name="map">Map</string>
     <string name="home">Home</string>
-    <string name="news">NEWS</string>
-    <string name="new_description_tv">Carlos Soria: "I will to try again the Dhaulagiri on March 2021"</string>
-    <string name="country_name">Nepal</string>
+    <string name="news">News</string>
+    <string name="new_description_tv">  <b>Carlos Soria</b>: &quot;I will to try again the Dhaulagiri on March 2022&quot;</string>
+    <string name="country_name" translatable="false">Nepal</string>
 
 </resources>
