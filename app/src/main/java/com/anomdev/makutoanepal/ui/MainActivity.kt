@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityMainBinding
-import com.anomdev.makutoanepal.ui.fragments.AssociationsDetailFragment
 import com.anomdev.makutoanepal.ui.fragments.AssociationsListFragment
 import com.anomdev.makutoanepal.ui.fragments.CountryFragment
 import com.anomdev.makutoanepal.ui.fragments.MapFragment
@@ -21,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     private val mapFragment = MapFragment()
     private val associationsFragment = AssociationsListFragment()
 
-    private val associationDetailFragment = AssociationsDetailFragment()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

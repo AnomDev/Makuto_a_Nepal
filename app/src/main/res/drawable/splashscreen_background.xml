@@ -3,7 +3,7 @@
     android:opacity="opaque">
     <item
         android:gravity="fill"
-        android:drawable="@drawable/silk_sea"
+        android:drawable="@drawable/splash_background"
         />
     <item
         android:left="10dp"

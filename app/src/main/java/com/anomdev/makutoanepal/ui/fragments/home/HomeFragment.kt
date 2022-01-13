@@ -13,9 +13,14 @@ import com.anomdev.makutoanepal.model.BlogPost
 
 val postsOnFeed = listOf(
     BlogPost(
+        "https://alongthisjourneyblog.files.wordpress.com/2015/11/img-20151015-wa0012.jpg",
+        "La infancia en la región montaños de Nepal",
+        "13/01/2022"
+    ),
+    BlogPost(
         "https://www.publico.es/uploads/2016/05/18/573c0f92e7307.jpg",
-        "Carlos Soria: Voy a intentar no hardcodear textos",
-        "12/01/2022"
+        "Carlos Soria: \"Voy a intentar no hardcodear textos\"",
+        "01/01/2022"
     ),
     BlogPost(
         "https://www.excelenciasdelmotor.com/sites/default/files/inline-images/lukla2.jpg",
@@ -28,14 +33,22 @@ val postsOnFeed = listOf(
         "Budismo e Hinduismo en Nepal: juntos pero no revueltos",
         "07/12/2021"
     ),
-
+    BlogPost(
+        "https://www.lugaresdeaventura.com/sites/default/files/inline-images/14-peaks.jpeg",
+        "Estreno mundial de \"14 Peaks: Nothis is impossible\" del escalador Nirmal Purja",
+        "29/11/2021"
+    ),
     BlogPost(
         "https://www.spotlightnepal.com/media/images/Nekapaa-70th-Anniversary-1-2.2e16d0ba.fill-650x500.jpg",
         "Los maoístas suben al poder en coalición con el partido congresista",
         "20/11/2021"
-    )
+    ),
 
-
+    BlogPost(
+        "https://static-abcblogs.abc.es/wp-content/uploads/sites/13/2017/11/Kumari-AFP.jpg",
+        "Kumari Devi: la diosa viviente del Nepal",
+        "06/11/2021"
+    ),
 )
 
 class HomeFragment : Fragment() {
