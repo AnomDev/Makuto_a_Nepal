@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.fragments.home.detailpost.PostDetailActivity">
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:textSize="40sp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/post_detail_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/doubleMinimunDimen"
+            android:gravity="start" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/post_detail_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/tripleMinimunDimen"
+        android:layout_marginTop="@dimen/minimunDimen"
+        android:layout_marginEnd="@dimen/tripleMinimunDimen"
+        android:layout_marginBottom="@dimen/minimunDimen"
+        android:gravity="start"
+        android:textColor="@color/secondary"
+        android:textAlignment="textStart"
+        android:justificationMode="inter_word"
+        android:text="Detail activity from a post of the News feed "
+        android:textSize="@dimen/subtitleSize" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Detail activity from a post of the News feed " />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginBottom="@dimen/tripleMinimunDimen">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/post_detail_image_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="@dimen/tripleMinimunDimen"
+                android:scaleType="centerCrop"
+                android:src="@drawable/soria" />
+
+            <TextView
+                android:id="@+id/post_detail_text_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tripleMinimunDimen"
+                android:layout_marginTop="@dimen/minimunDimen"
+                android:layout_marginEnd="@dimen/tripleMinimunDimen"
+                android:layout_marginBottom="@dimen/minimunDimen"
+                android:gravity="start"
+                android:justificationMode="inter_word"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dui metus, interdum vitae felis at, tempor vestibulum dui. Nam mauris dolor, malesuada vel facilisis ac, egestas at metus. Etiam ultrices ipsum non diam facilisis, eget ornare lacus venenatis. Mauris leo turpis, consequat et elementum non, pharetra sed enim. Nunc at ante mollis augue pretium auctor. Nam sed ipsum at libero iaculis accumsan. Nulla est ipsum, convallis tincidunt nisl non, vestibulum vehicula ante. Nunc vulputate at risus eget vestibulum. Quisque viverra dolor eget nisi elementum rutrum. Etiam ultrices faucibus erat eget ultrices. Etiam eget metus nec leo venenatis sagittis quis vitae leo. Suspendisse in suscipit est. Quisque mollis malesuada eleifend. In placerat convallis lacus, at lacinia ex posuere non. Donec efficitur, enim nec ultricies euismod, arcu lorem malesuada nulla, ut tristique velit dui eget orci. Pellentesque egestas vel metus a suscipit.\n \n
+Sed rutrum blandit dolor sit amet cursus. Nunc scelerisque nisl vel aliquet efficitur. Nam ornare a diam ac bibendum. Ut tincidunt ligula nec sodales dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus lacus ac nisl aliquet, ut semper dui pretium. Mauris a est sodales, elementum nisl quis, euismod lacus. In sollicitudin suscipit nibh in rutrum. Nullam a justo et dui interdum elementum in in magna. Cras in orci quis elit pretium sollicitudin at et ante. Maecenas ut turpis et enim semper pellentesque. \n \n
+Donec molestie neque a leo sagittis ornare. Sed sed ligula vitae justo venenatis ultrices et et nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu faucibus ipsum, id mattis dolor. Sed quis enim neque. Duis pretium at diam sit amet mollis. Etiam posuere libero et accumsan tristique. Vestibulum mattis sem et magna efficitur, eu sodales metus elementum. Nulla vel ipsum et neque aliquam gravida quis at eros. Etiam ex leo, sagittis sed eleifend posuere, accumsan a nisi. Aenean et justo dapibus, iaculis velit et, auctor mi. Duis sagittis erat at sapien malesuada pulvinar.\n \n
+Quisque consectetur dictum venenatis. Phasellus ac consectetur eros. Curabitur sem velit, lobortis eu metus non, tincidunt fermentum nunc. Suspendisse ac mollis mi, ac rhoncus sem. Donec eget turpis laoreet, imperdiet leo eu, rutrum libero. Praesent sit amet quam sit amet urna iaculis sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in faucibus arcu. Aliquam nec ultricies turpis.
+Sed est leo, pharetra eget orci id, commodo porta arcu. Praesent tempor vehicula quam, ac scelerisque urna sagittis sed. Vestibulum odio massa, sollicitudin aliquet porta sed, porta ut arcu. Donec vitae arcu fermentum, dapibus elit sed, fermentum dolor. Aenean elementum consequat felis ac vestibulum. Aliquam dui sem, pellentesque vitae enim eget, consequat accumsan ex. Ut at odio erat."
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

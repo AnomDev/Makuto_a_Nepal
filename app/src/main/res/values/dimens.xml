@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="minimunDimen">8dp</dimen>
+    <dimen name="doubleMinimunDimen">16dp</dimen>
+    <dimen name="tripleMinimunDimen">24dp</dimen>
+
+
     <dimen name="heightLogo">45dp</dimen>
     <dimen name="heightToolbar">30dp</dimen>
     <dimen name="cardCornerRadius">4dp</dimen>
@@ -9,15 +14,10 @@
     <!-- Margins -->
     <dimen name="marginDefault">10dp</dimen>
     <dimen name="marginNewCardViewToParent">20dp</dimen>
-    <dimen name="paddingTextDescriptionInsideNewCardView">8dp</dimen>
-
-
 
     <!-- Texts -->
-    <dimen name="titleSize">40sp</dimen>
+    <dimen name="titleSize">32sp</dimen>
     <dimen name="subtitleSize">24sp</dimen>
     <dimen name="dateSize">16sp</dimen>
-
-
 
 </resources>

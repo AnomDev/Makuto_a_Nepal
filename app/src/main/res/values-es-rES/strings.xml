@@ -3,6 +3,6 @@
     <string name="ngos">ONG\'s</string>
     <string name="map">Mapa</string>
     <string name="home">Inicio</string>
-    <string name="news">Noticias</string>
+    <string name="news">Entradas del blog</string>
     <string name="default_text">Este es un texto predeterminado que será reemplazado posteriormente</string>
 </resources>

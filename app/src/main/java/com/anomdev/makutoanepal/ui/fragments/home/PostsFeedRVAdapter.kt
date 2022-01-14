@@ -48,9 +48,9 @@ class PostHolder(val binding: ItemBlogPostBinding) : RecyclerView.ViewHolder(bin
     val cardView = binding.topCardview
 
     fun render(feedList: BlogPost) {
-        binding.tvTitle.text = feedList.title
-        Picasso.get().load(feedList.image).into(binding.ivPost)
-        binding.tvDate.text = feedList.date
+        binding.postOnFeedTitleTv.text = feedList.title
+        Picasso.get().load(feedList.image).into(binding.postOnFeedImageIv)
+        binding.postOnFeedDateTv.text = feedList.date
 
 
     }
