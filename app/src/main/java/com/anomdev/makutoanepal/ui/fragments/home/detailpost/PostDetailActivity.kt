@@ -1,6 +1,5 @@
 package com.anomdev.makutoanepal.ui.fragments.home.detailpost
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -13,14 +12,13 @@ import com.bumptech.glide.Glide
 class PostDetailActivity : AppCompatActivity() {
 
     //TODO: Recuperar los datos que trae el intent del Adapter y pintarlos en esta activity
-    private var _binding: ActivityPostDetailBinding? = null
-    private val binding get() = _binding!!
-
+    private lateinit var binding: ActivityPostDetailBinding
 
 //    val imageView: ImageView = findViewById<ImageView>(R.id.post_detail_image_iv)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityPostDetailBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_post_detail)
 
         Log.d("extras", intent.extras.toString())
@@ -30,16 +28,16 @@ class PostDetailActivity : AppCompatActivity() {
         Log.d("getExtraDate", intent.getStringExtra("datePost").toString())
         Log.d("getExtraBody", intent.getStringExtra("bodyPost").toString())
 
-        if (binding = null) {
+        if (binding == null) {
             Log.d("bindingNull", intent.extras.toString())
 
         }
 
 
-            if (intent.extras != null) {
+        if (intent.extras != null) {
 
-//            val imagePost: String = intent.getStringExtra("imagePost").toString()
-//            Glide.with(this).load(imagePost).into(binding.ivImageDetailActivity)
+            val imagePost: String = intent.getStringExtra("imagePost").toString()
+            Glide.with(this).load(imagePost).into(binding.ivImageDetailActivity)
 
             val titlePost: String = intent.getStringExtra("titlePost").toString()
             binding.tvPostTitleDetailActivity.text = titlePost
