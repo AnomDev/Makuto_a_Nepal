@@ -19,7 +19,7 @@ class PostDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPostDetailBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_post_detail)
+        setContentView(binding.root)
 
         Log.d("extras", intent.extras.toString())
 
