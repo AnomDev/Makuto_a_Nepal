@@ -13,16 +13,31 @@
         android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/post_detail_back_btn"
+            android:id="@+id/btnBackDetailActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/doubleMinimunDimen"
             android:gravity="start" />
 
+        <TextView
+            android:id="@+id/tvDateActivityDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/tripleMinimunDimen"
+            android:layout_marginTop="@dimen/minimunDimen"
+            android:layout_marginEnd="@dimen/tripleMinimunDimen"
+            android:layout_marginBottom="@dimen/minimunDimen"
+            android:gravity="start"
+            android:textColor="@color/secondary"
+            android:textAlignment="textEnd"
+            android:justificationMode="inter_word"
+            android:text="Detail activity from a post of the News feed "
+            android:textSize="@dimen/dateSize" />
+
     </LinearLayout>
 
     <TextView
-        android:id="@+id/post_detail_title_tv"
+        android:id="@+id/tvPostTitleDetailActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/tripleMinimunDimen"
@@ -48,15 +63,15 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/post_detail_image_iv"
+                android:id="@+id/ivImageDetailActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_margin="@dimen/tripleMinimunDimen"
                 android:scaleType="centerCrop"
-                android:src="@drawable/soria" />
+                tools:src="@drawable/soria" />
 
             <TextView
-                android:id="@+id/post_detail_text_tv"
+                android:id="@+id/tvBodyPostDetailActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/tripleMinimunDimen"

@@ -1,27 +1,38 @@
 package com.anomdev.makutoanepal.ui.fragments.home
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemBlogPostBinding
 import com.anomdev.makutoanepal.model.BlogPost
-import com.anomdev.makutoanepal.ui.MainActivity
+import com.anomdev.makutoanepal.model.BlogPostProvider
 import com.anomdev.makutoanepal.ui.fragments.home.detailpost.PostDetailActivity
-import com.squareup.picasso.Picasso
+import com.bumptech.glide.Glide
 
 
 class PostsFeedRVAdapter(val feedList: List<BlogPost>) :
-    RecyclerView.Adapter<PostsFeedRVAdapter.PostHolder>() {
+    RecyclerView.Adapter<PostsFeedRVAdapter.PostViewHolder>() {
 
+//    private lateinit var mListener: OnItemClickListener
+
+//    interface OnItemClickListener {
+//        fun onItemClick(position: Int)
+//    }
+//
+//    fun setOnItemClickListener(listener: OnItemClickListener) {
+//        mListener = listener
+//    }
 
     //Éste método crea el ViewHolder, en este caso el PostHolder
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding =
             ItemBlogPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return PostHolder(binding)
+        return PostViewHolder(binding)
+
+//        return PostViewHolder(binding,mListener)
     }
 
     //Éste método dice cuántos items tiene el RV
@@ -30,30 +41,48 @@ class PostsFeedRVAdapter(val feedList: List<BlogPost>) :
     }
 
     // Éste metodo muestra los datos en la posición especificada
-    override fun onBindViewHolder(holder: PostHolder, position: Int) {
-        holder.render(feedList[position])
+    override fun onBindViewHolder(viewHolder: PostViewHolder, position: Int) {
+        viewHolder.render(feedList[position])
 
-        holder.cardView.setOnClickListener {
+        viewHolder.cardView.setOnClickListener {
 
-            val intent = Intent(holder.binding.root.context, PostDetailActivity::class.java)
-            startActivity(holder.binding.root.context,intent,null)
+//            itemClickListener.OnItemClick()
+
+            val intent = Intent(viewHolder.binding.root.context, PostDetailActivity::class.java)
+                intent.putExtra("imagePost", BlogPostProvider.blogPostList[position].image )
+                intent.putExtra("titlePost", BlogPostProvider.blogPostList[position].title )
+                intent.putExtra("datePost", BlogPostProvider.blogPostList[position].date )
+                intent.putExtra("bodyPost", BlogPostProvider.blogPostList[position].body )
+
+            Log.d("intentExtraImage", "${intent.getStringExtra("imagePost")}")
+            Log.d("intentExtraTitle", "${intent.getStringExtra("titlePost")}")
+            Log.d("intentExtraDate", "${intent.getStringExtra("datePost")}")
+            Log.d("intentExtraBody", "${intent.getStringExtra("bodyPost")}")
+
+
+            startActivity(viewHolder.binding.root.context, intent, null)
         }
 
     }
 
+    class PostViewHolder(val binding: ItemBlogPostBinding) : RecyclerView.ViewHolder(binding.root) {
+
+//    class PostViewHolder(val binding: ItemBlogPostBinding, listener: OnItemClickListener) : RecyclerView.ViewHolder(binding.root) {
+
+        val cardView = binding.topCardview
+//        init{
+//            itemView.setOnClickListener{
+//                listener.onItemClick(adapterPosition)
+//            }
+//        }
+
+        fun render(feedList: BlogPost) {
+            binding.postOnFeedTitleTv.text = feedList.title
+            binding.postOnFeedDateTv.text = feedList.date
+            Glide.with(cardView.context).load(feedList.image).into(binding.postOnFeedImageIv)
 
 
-class PostHolder(val binding: ItemBlogPostBinding) : RecyclerView.ViewHolder(binding.root) {
-
-    val cardView = binding.topCardview
-
-    fun render(feedList: BlogPost) {
-        binding.postOnFeedTitleTv.text = feedList.title
-        Picasso.get().load(feedList.image).into(binding.postOnFeedImageIv)
-        binding.postOnFeedDateTv.text = feedList.date
-
-
+        }
     }
-}
 
 }
