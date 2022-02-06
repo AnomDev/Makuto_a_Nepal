@@ -16,23 +16,12 @@ import com.bumptech.glide.Glide
 class PostsFeedRVAdapter(val feedList: List<BlogPost>) :
     RecyclerView.Adapter<PostsFeedRVAdapter.PostViewHolder>() {
 
-//    private lateinit var mListener: OnItemClickListener
-
-//    interface OnItemClickListener {
-//        fun onItemClick(position: Int)
-//    }
-//
-//    fun setOnItemClickListener(listener: OnItemClickListener) {
-//        mListener = listener
-//    }
-
     //Éste método crea el ViewHolder, en este caso el PostHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val binding =
             ItemBlogPostBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PostViewHolder(binding)
 
-//        return PostViewHolder(binding,mListener)
     }
 
     //Éste método dice cuántos items tiene el RV

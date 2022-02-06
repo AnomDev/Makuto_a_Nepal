@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:columnCount="2"
+    android:rowCount="2"    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvGridCountryFragment"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="@dimen/doubleMinimunDimen"
+        android:layout_marginBottom="@dimen/minimunDimen"
+        android:layout_marginTop="@dimen/doubleMinimunDimen"
+        app:cardCornerRadius="@dimen/cardCornerRadius"
+        app:cardElevation="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/ivTopicCountryFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/culture"
+                android:layout_weight="3"/>
+
+
+
+            <TextView
+                android:id="@+id/tvTopicCountryFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingEnd="@dimen/minimunDimen"
+                android:paddingStart="@dimen/minimunDimen"
+                android:paddingBottom="@dimen/minimunDimen"
+                android:text="@string/history"
+                android:textColor="@color/secondary_dark"
+                android:layout_weight="0.5"
+                android:textAlignment="center"
+                android:textSize="@dimen/dateSize"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</GridLayout>

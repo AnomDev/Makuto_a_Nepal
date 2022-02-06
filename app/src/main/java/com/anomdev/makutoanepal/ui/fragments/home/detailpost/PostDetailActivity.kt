@@ -21,6 +21,7 @@ class PostDetailActivity : AppCompatActivity() {
         binding = ActivityPostDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         Log.d("extras", intent.extras.toString())
 
         Log.d("getExtraImage", intent.getStringExtra("imagePost").toString())
@@ -32,6 +33,7 @@ class PostDetailActivity : AppCompatActivity() {
             Log.d("bindingNull", intent.extras.toString())
 
         }
+
 
 
         if (intent.extras != null) {
@@ -56,5 +58,16 @@ class PostDetailActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Pues viene vacío el puto intent", Toast.LENGTH_LONG).show()
         }
+
+        binding.btnBackDetailActivity.setOnClickListener{
+            onButtonPressed()
+        }
+
     }
+
+    private fun onButtonPressed() {
+        finish()
+    }
+
+
 }

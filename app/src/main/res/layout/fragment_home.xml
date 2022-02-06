@@ -22,14 +22,14 @@
             android:background="@color/primary">
 
             <TextView
-                android:id="@+id/title_tv"
+                android:id="@+id/tvTitleHomeFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/minimunDimen"
                 android:layout_marginEnd="@dimen/minimunDimen"
                 android:layout_marginTop="@dimen/minimunDimen"
                 android:layout_marginBottom="@dimen/minimunDimen"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:text="@string/news"
                 android:textColor="@color/secondary_dark"
                 android:textSize="@dimen/titleSize"

@@ -29,7 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.fragments.home.detailpost.PostDetailActivity" />
+        <activity android:name=".ui.fragments.home.detailpost.PostDetailActivity"/>
+        <activity android:name=".ui.fragments.country.detailtopic.TopicDetailActivity"/>
     </application>
 
 </manifest>

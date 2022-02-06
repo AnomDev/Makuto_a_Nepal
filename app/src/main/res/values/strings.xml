@@ -10,5 +10,10 @@
     <string name="news">Blog posts</string>
     <string name="default_text">This is a default text who will be replaced</string>
     <string name="country_name" translatable="false">Nepal</string>
+    <string name="history">History &amp; Culture</string>
+
+    <string name="others">Other data</string>
+    <string name="gastronomy">Food</string>
+    <string name="country_info">Country info</string>
 
 </resources>

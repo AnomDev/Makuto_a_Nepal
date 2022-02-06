@@ -5,4 +5,7 @@
     <string name="home">Inicio</string>
     <string name="news">Entradas del blog</string>
     <string name="default_text">Este es un texto predeterminado que será reemplazado posteriormente</string>
+    <string name="country_info">Ficha del país</string>
+    <string name="history">Historia y cultura</string>
+
 </resources>
