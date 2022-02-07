@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="INIT_LAT" translatable="false">27.704276253037136</string>
+    <string name="INIT_LNG" translatable="false"> 85.30667375972864</string>
+
+    <!-- Points of interest (red coloured)-->
+    <string name="SWAYAMBHU_LAT" translatable="false">27.714996251922173</string>
+    <string name="SWAYAMBHU_LNG" translatable="false">85.29029138568534</string>
+
+    <string name="PASHU_LAT" translatable="false">27.710858706799353</string>
+    <string name="PASHU_LNG" translatable="false">85.34875725556991</string>
+
+    <string name="BOUDHA_LAT" translatable="false">27.72160113970805</string>
+    <string name="BOUDHA_LNG" translatable="false">85.36197594401187</string>
+
+    <string name="CHITWAN_LAT" translatable="false">27.537436062338333</string>
+    <string name="CHITWAN_LNG" translatable="false">84.45298574652092</string>
+
+    <string name="LUMBINI_LAT" translatable="false">27.469562950619707</string>
+    <string name="LUMBINI_LNG" translatable="false">83.27578390369614</string>
+
+    <!-- Trekkings (orange coloured)-->
+    <string name="EBC_LAT" translatable="false">28.00348769078212</string>
+    <string name="EBC_LNG" translatable="false">86.85512660313927</string>
+
+    <string name="POON_LAT" translatable="false">28.40095061140375</string>
+    <string name="POON_LNG" translatable="false">83.68912699569616</string>
+
+    <string name="DHAULA_LAT" translatable="false">28.701012274246576</string>
+    <string name="DHAULA_LNG" translatable="false">83.4864376249033</string>
+
+    <!-- Business (blue coloured)-->
+    <string name="NISCHAL_LAT" translatable="false">27.713661107116973</string>
+    <string name="NISCHAL_LNG" translatable="false">85.27576305043434</string>
+
+    <string name="NOTTOPVIEW_LAT" translatable="false">28.200339869887923</string>
+    <string name="NOTTOPVIEW_LNG" translatable="false">83.94658641631239</string>
+
+    <!-- NGOs (green coloured)-->
+    <string name="NEPALSONRIE_LAT" translatable="false">27.454211236310606</string>
+    <string name="NEPALSONRIE_LNG" translatable="false">84.93322067439281</string>
+
+    <string name="UDANA_LAT" translatable="false">27.71710049815871</string>
+    <string name="UDANA_LNG" translatable="false"> 85.36280954141009</string>
+
+</resources>

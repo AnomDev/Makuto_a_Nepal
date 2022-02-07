@@ -16,4 +16,45 @@
     <string name="gastronomy">Food</string>
     <string name="country_info">Country info</string>
 
+    <!-- LOCATIONS -->
+    <string name="swayambhu" translatable="false">Swayambhunath</string>
+    <string name="swayambhu_snippet">The monkey temple</string>
+
+    <string name="pashu" translatable="false">Pashupatinath</string>
+    <string name="pashu_snippet">The temple of Sri Pashupatinath</string>
+
+    <string name="boudha" translatable="false">Boudhanath</string>
+    <string name="boudha_snippet">One of the world\'s biggest stupa</string>
+
+    <string name="chitwan" translatable="false">Chitwan</string>
+    <string name="chitwan_snippet">The biggest National Park in Nepal</string>
+
+    <string name="lumbini" translatable="false">Lumbini</string>
+    <string name="lumbini_snippet">Birthplace of Buddha</string>
+
+    <!-- TREKKINGS -->
+    <string name="ebc" translatable="false">Everest Base Camp (5.364m | 17,598ft)</string>
+    <string name="ebc_snippet">The basecamp under the top of the world</string>
+
+    <string name="poon" translatable="false">Poon Hill (3.210m | 10,530ft)</string>
+    <string name="poon_snippet">Amazing views of the Annapurna range</string>
+
+    <string name="dhaula" translatable="false">Dhaulagiri Base Camp (4.650m | 15,252ft)</string>
+    <string name="dhaula_snippet">A high-skilled challenge trek </string>
+
+    <!-- BUSINESS -->
+    <string name="nischal_guesthouse" translatable="false">Sunny Homestay</string>
+    <string name="nischal_guesthouse_snippet">Amazing guesthouse in Sitapaila</string>
+
+    <string name="nottopview_restaurant" translatable="false">Not top of view</string>
+    <string name="nottopview_restaurant_snippet">Guesthouse para voluntarios en Sitapaila</string>
+
+
+    <!-- NGOs -->
+    <string name="nepalsonrie" translatable="false">Nepal Sonríe</string>
+    <string name="nepalsonrie_snippet">School in Hetauda</string>
+
+    <string name="udana" translatable="false">Udana Nepal</string>
+    <string name="udana_snippet">Association to help women and girls</string>
+
 </resources>

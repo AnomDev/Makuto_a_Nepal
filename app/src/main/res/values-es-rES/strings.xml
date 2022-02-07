@@ -8,4 +8,25 @@
     <string name="country_info">Ficha del país</string>
     <string name="history">Historia y cultura</string>
 
+    <!-- LUGARES  -->
+    <string name="boudha_snippet">Una de las mayores estupas del mundo</string>
+    <string name="swayambhu_snippet">El templo de los monos</string>
+    <string name="pashu_snippet">El templo de Pasupati</string>
+    <string name="chitwan_snippet">El Parque Nacional más grande de Nepal</string>
+    <string name="lumbini_snippet">Lugar de nacimiento de Buda</string>
+
+    <!-- TREKKINGS -->
+    <string name="ebc_snippet">El campobase bajo la montaña más alta del planeta</string>
+    <string name="poon_snippet">Increíbles vistas del macizo de los Annapurnas</string>
+    <string name="dhaula_snippet">Un trekking sólo para montañeros experimentados</string>
+
+    <!-- NEGOCIOS -->
+    <string name="nischal_guesthouse_snippet">Guesthouse para voluntarios en Sitapaila</string>
+    <string name="nottopview_restaurant_snippet">Restaurante en la Pagoda de la Paz Mundial</string>
+
+
+    <!-- ONGs -->
+    <string name="nepalsonrie_snippet">Escuela infantil en Hetauda</string>
+    <string name="udana_snippet">Asociación de ayuda a la mujer y la niña nepalesa</string>
+
 </resources>
