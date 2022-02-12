@@ -5,77 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragments.home.detailpost.PostDetailActivity">
+    tools:context=".ui.fragments.country.topiclist.detailtopicelement.CountryElementDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:backgroundTint="@color/white"
-            android:id="@+id/btnBackDetailActivity"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="@dimen/doubleMinimunDimen"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:text="ᐸ"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:id="@+id/tvDateActivityDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/doubleMinimunDimen"
-
-            android:gravity="end"
-            android:textColor="@color/secondary"
-            android:textAlignment="textEnd"
-            android:justificationMode="inter_word"
-            android:text="Detail activity from a post of the News feed "
-            android:textSize="@dimen/dateSize" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvPostTitleDetailActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/tripleMinimunDimen"
-        android:layout_marginTop="@dimen/minimunDimen"
-        android:layout_marginEnd="@dimen/tripleMinimunDimen"
-        android:layout_marginBottom="@dimen/minimunDimen"
-        android:gravity="start"
-        android:textColor="@color/secondary"
-        android:textAlignment="textStart"
-        android:justificationMode="inter_word"
-        android:text="Detail activity from a post of the News feed "
-        android:textSize="@dimen/subtitleSize" />
-
-
-    <ScrollView
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/tripleMinimunDimen">
+        android:orientation="vertical"
+        tools:context=".ui.fragments.home.detailpost.PostDetailActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/ivImageDetailActivity"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_margin="@dimen/tripleMinimunDimen"
-                android:scaleType="centerCrop"
-                tools:src="@drawable/soria" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackCountryElementDetailActivity"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/doubleMinimunDimen"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="ᐸ"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTitleCountryElement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/doubleMinimunDimen"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:text="Title"
+                android:textAlignment="center"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/subtitleSize" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivImageCountryElementDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/tripleMinimunDimen"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/silk_sea" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="317dp"
+            android:layout_marginBottom="@dimen/minimunDimen">
+
 
             <TextView
                 android:id="@+id/tvBodyPostDetailActivity"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/tripleMinimunDimen"
                 android:layout_marginTop="@dimen/minimunDimen"
@@ -88,10 +74,43 @@ Sed rutrum blandit dolor sit amet cursus. Nunc scelerisque nisl vel aliquet effi
 Donec molestie neque a leo sagittis ornare. Sed sed ligula vitae justo venenatis ultrices et et nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu faucibus ipsum, id mattis dolor. Sed quis enim neque. Duis pretium at diam sit amet mollis. Etiam posuere libero et accumsan tristique. Vestibulum mattis sem et magna efficitur, eu sodales metus elementum. Nulla vel ipsum et neque aliquam gravida quis at eros. Etiam ex leo, sagittis sed eleifend posuere, accumsan a nisi. Aenean et justo dapibus, iaculis velit et, auctor mi. Duis sagittis erat at sapien malesuada pulvinar.\n \n
 Quisque consectetur dictum venenatis. Phasellus ac consectetur eros. Curabitur sem velit, lobortis eu metus non, tincidunt fermentum nunc. Suspendisse ac mollis mi, ac rhoncus sem. Donec eget turpis laoreet, imperdiet leo eu, rutrum libero. Praesent sit amet quam sit amet urna iaculis sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in faucibus arcu. Aliquam nec ultricies turpis.
 Sed est leo, pharetra eget orci id, commodo porta arcu. Praesent tempor vehicula quam, ac scelerisque urna sagittis sed. Vestibulum odio massa, sollicitudin aliquet porta sed, porta ut arcu. Donec vitae arcu fermentum, dapibus elit sed, fermentum dolor. Aenean elementum consequat felis ac vestibulum. Aliquam dui sem, pellentesque vitae enim eget, consequat accumsan ex. Ut at odio erat."
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
 
-    </ScrollView>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See on map"
+            android:textColor="@color/secondary"
+            android:layout_margin="@dimen/doubleMinimunDimen"
+            android:elevation="@dimen/minimunDimen" />
+
+    </LinearLayout>
+
+
+    <!--
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <TextView
+        android:id="@+id/tvBodyCountryElement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/default_text"
+        android:textColor="@color/secondary"
+        android:textSize="16sp" />
+
+   -->
 
 </LinearLayout>

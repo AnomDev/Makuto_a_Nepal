@@ -1,11 +1,12 @@
 package com.anomdev.makutoanepal.ui
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityMainBinding
-import com.anomdev.makutoanepal.ui.fragments.business.AssociationsListFragment
+import com.anomdev.makutoanepal.ui.fragments.business.BusinessListFragment
 import com.anomdev.makutoanepal.ui.fragments.country.CountryFragment
 import com.anomdev.makutoanepal.ui.fragments.map.MapFragment
 import com.anomdev.makutoanepal.ui.fragments.home.HomeFragment
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val countryFragment = CountryFragment()
     private val mapFragment = MapFragment()
-    private val associationsFragment = AssociationsListFragment()
+    private val businessFragment = BusinessListFragment()
 
 
 
@@ -31,9 +32,8 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId){
                 R.id.menuitem_home -> replaceFragment(homeFragment)
                 R.id.menuitem_country -> replaceFragment(countryFragment)
-                R.id.menuitem_associations -> replaceFragment(associationsFragment)
+                R.id.menuitem_business -> replaceFragment(businessFragment)
                 R.id.menuitem_map -> replaceFragment(mapFragment)
-
             }
             true
         }
@@ -47,6 +47,23 @@ class MainActivity : AppCompatActivity() {
             } else {
 
             }
+    }
+
+    override fun onBackPressed() {
+               val dialog = AlertDialog.Builder(this)
+               .setTitle(R.string.alert_dialog_exit_title)
+               .setMessage(R.string.alert_dialog_exit_message)
+               .setNegativeButton(R.string.alert_dialog_exit_negative_btn) { view, _ ->
+                   view.dismiss()
+               }
+               .setPositiveButton(R.string.alert_dialog_exit_positive_btn) { _, _ ->
+                   finish()
+               }
+               .setCancelable(false)
+               .create()
+
+           dialog.show()
+
     }
 }
 

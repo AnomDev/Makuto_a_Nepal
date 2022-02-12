@@ -14,7 +14,7 @@
         />
 
     <item
-        android:id="@+id/menuitem_associations"
+        android:id="@+id/menuitem_business"
         android:icon="@drawable/ic_business"
         android:title="@string/ngos" />
 

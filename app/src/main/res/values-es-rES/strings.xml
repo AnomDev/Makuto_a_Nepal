@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ngos">ONG\'s</string>
+
+    <!-- Common & Non translatable -->
+    <string name="default_text">Este es un texto predeterminado que será reemplazado posteriormente</string>
+
+    <!-- Navbar -->
+    <string name="ngos">Negocios y ONG\'s</string>
     <string name="map">Mapa</string>
     <string name="home">Inicio</string>
     <string name="news">Entradas del blog</string>
-    <string name="default_text">Este es un texto predeterminado que será reemplazado posteriormente</string>
+
+    <!-- Grid Country Fragment -->
     <string name="country_info">Ficha del país</string>
-    <string name="history">Historia y cultura</string>
+    <string name="history_culture">Historia y cultura</string>
+    <string name="nature">Naturaleza</string>
+    <string name="poi">Puntos de interés</string>
+    <string name="trekkings">Rutas de montaña</string>
+    <string name="gastronomy">Gastronomía</string>
+    <string name="others">Otros datos</string>
+
+    <!-- Alert Dialog -->
+    <string name="alert_dialog_exit_title">Cerrar \"Makuto a Nepal\"</string>
+    <string name="alert_dialog_exit_message">¿Estás seguro de que quieres salir?</string>
 
     <!-- LUGARES  -->
     <string name="boudha_snippet">Una de las mayores estupas del mundo</string>
@@ -23,7 +38,7 @@
     <!-- NEGOCIOS -->
     <string name="nischal_guesthouse_snippet">Guesthouse para voluntarios en Sitapaila</string>
     <string name="nottopview_restaurant_snippet">Restaurante en la Pagoda de la Paz Mundial</string>
-
+    <string name="nayapul_teahouse_snippet">Humilde chabola donde tomar té antes de empezar el trek Annapurna-Poon Hill trek</string>
 
     <!-- ONGs -->
     <string name="nepalsonrie_snippet">Escuela infantil en Hetauda</string>

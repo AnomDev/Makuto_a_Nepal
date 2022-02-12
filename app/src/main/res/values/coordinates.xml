@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="INIT_LAT" translatable="false">27.704276253037136</string>
-    <string name="INIT_LNG" translatable="false"> 85.30667375972864</string>
+    <string name="INIT_LAT" translatable="false">28.26699004785961</string>
+    <string name="INIT_LNG" translatable="false">83.92974116521346</string>
 
     <!-- Points of interest (red coloured)-->
     <string name="SWAYAMBHU_LAT" translatable="false">27.714996251922173</string>
@@ -35,6 +35,9 @@
 
     <string name="NOTTOPVIEW_LAT" translatable="false">28.200339869887923</string>
     <string name="NOTTOPVIEW_LNG" translatable="false">83.94658641631239</string>
+
+    <string name="NAYAPUL_LAT" translatable="false">28.299742993854224</string>
+    <string name="NAYAPUL_LNG" translatable="false">83.77135892843827</string>
 
     <!-- NGOs (green coloured)-->
     <string name="NEPALSONRIE_LAT" translatable="false">27.454211236310606</string>

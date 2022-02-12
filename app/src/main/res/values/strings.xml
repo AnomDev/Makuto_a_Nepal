@@ -1,20 +1,31 @@
 <resources>
+    <!-- Common & Non translatable -->
     <string name="app_name" translatable="false">Makuto a Nepal</string>
-
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="country_name" translatable="false">Nepal</string>
+
+    <string name="default_text">This is a default text who will be replaced</string>
 
     <!-- Navbar -->
-    <string name="ngos">NGOs</string>
+    <string name="ngos">Business &amp; NGO\'s</string>
     <string name="map">Map</string>
     <string name="home">Home</string>
     <string name="news">Blog posts</string>
-    <string name="default_text">This is a default text who will be replaced</string>
-    <string name="country_name" translatable="false">Nepal</string>
-    <string name="history">History &amp; Culture</string>
 
-    <string name="others">Other data</string>
-    <string name="gastronomy">Food</string>
+    <!-- Grid Country Fragment -->
     <string name="country_info">Country info</string>
+    <string name="history_culture">History &amp; Culture</string>
+    <string name="nature">Nature</string>
+    <string name="poi">Points of interest</string>
+    <string name="trekkings">Trekkings</string>¡
+    <string name="gastronomy">Food</string>
+    <string name="others">Other data</string>
+
+    <!-- Alert Dialog -->
+    <string name="alert_dialog_exit_title">Close \"Makuto a Nepal\"</string>
+    <string name="alert_dialog_exit_message">Do you want to exit from the app?</string>
+    <string name="alert_dialog_exit_negative_btn" translatable="false">❌</string>
+    <string name="alert_dialog_exit_positive_btn" translatable="false">✔️</string>
 
     <!-- LOCATIONS -->
     <string name="swayambhu" translatable="false">Swayambhunath</string>
@@ -49,12 +60,14 @@
     <string name="nottopview_restaurant" translatable="false">Not top of view</string>
     <string name="nottopview_restaurant_snippet">Guesthouse para voluntarios en Sitapaila</string>
 
-
+    <string name="nayapul_teahouse" translatable="false">Naya Pul teahouse</string>
+    <string name="nayapul_teahouse_snippet">Humble teahouse on the beginning of the Annapurna-Poon Hill trek</string>
     <!-- NGOs -->
     <string name="nepalsonrie" translatable="false">Nepal Sonríe</string>
     <string name="nepalsonrie_snippet">School in Hetauda</string>
 
     <string name="udana" translatable="false">Udana Nepal</string>
     <string name="udana_snippet">Association to help women and girls</string>
+
 
 </resources>

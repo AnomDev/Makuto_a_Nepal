@@ -212,6 +212,18 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                     .snippet(getString(R.string.nottopview_restaurant_snippet))
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
             )
+            mMap.addMarker(
+                MarkerOptions()
+                    .position(
+                        LatLng(
+                            getString(R.string.NAYAPUL_LAT).toDouble(),
+                            getString(R.string.NAYAPUL_LNG).toDouble()
+                        )
+                    )
+                    .title(getString(R.string.nayapul_teahouse))
+                    .snippet(getString(R.string.nayapul_teahouse_snippet))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+            )
         }
 
         return binding.root

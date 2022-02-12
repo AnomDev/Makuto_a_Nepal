@@ -34,15 +34,6 @@ class HomeFragment : Fragment() {
         binding.postsFeedRv.layoutManager = LinearLayoutManager(requireContext())
         val adapter = PostsFeedRVAdapter(BlogPostProvider.blogPostList)
         binding.postsFeedRv.adapter = adapter
-//        adapter.setOnItemClickListener(object : PostsFeedRVAdapter.OnItemClickListener {
-//            override fun onItemClick(position: Int) {
-//                val intent = Intent(requireContext(), PostDetailActivity::class.java)
-//                intent.putExtra("imageUrl", BlogPostProvider.blogPostList)
-//                intent.putExtra("titlePost", binding.)
-//                intent.putExtra("datePost", binding.)
-//                intent.putExtra("titlePost", binding.)
-//            }
-//        })
     }
 
 
