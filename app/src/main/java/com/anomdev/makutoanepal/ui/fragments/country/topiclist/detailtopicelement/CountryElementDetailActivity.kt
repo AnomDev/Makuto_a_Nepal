@@ -22,6 +22,7 @@ class CountryElementDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         onMapButtonPressed()
+
         Log.d("getExtraTOPICTitle", intent.getStringExtra("titleTopic").toString())
 
         if (binding == null) {
@@ -31,11 +32,15 @@ class CountryElementDetailActivity : AppCompatActivity() {
 
         if (intent.extras != null) {
 
+
             val imageTopicElement: Int = intent.getIntExtra("imageTopicElement",1).toInt()
             Glide.with(this).load(imageTopicElement).into(binding.ivImageCountryElementDetail)
 
             val titleTopicElement: String = intent.getStringExtra("titleTopicElement").toString()
             binding.tvTitleCountryElement.text = titleTopicElement
+
+            val bodyTopicElement: String = intent.getStringExtra("bodyTopicElement").toString()
+            binding.tvBodyCountryElementDetail.text = bodyTopicElement
 
         } else {
             Toast.makeText(this, "Pues viene vacío el puto intent", Toast.LENGTH_LONG).show()
@@ -45,7 +50,8 @@ class CountryElementDetailActivity : AppCompatActivity() {
 
     fun onMapButtonPressed(){
        binding.btnViewMap.setOnClickListener {
-            val intent = Intent(this, MapFragment::class.java)
+           //TODO: Esto falla principalmente porque no es una Activity a donde vamos, sino un fragment
+           val intent = Intent(this, MapFragment::class.java)
             ContextCompat.startActivity(this, intent, null)
         }
     }

@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Makutonepal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimary">@color/secondary_dark</item>
         <item name="colorPrimaryVariant">@color/primary_light</item>
         <item name="colorOnPrimary">@color/primary_dark</item>
         <!-- Secondary brand color. -->
@@ -37,5 +37,14 @@
         <item name="android:textColorPrimary">@color/accent</item>
         <item name="android:textColorSecondary">@color/accent_light</item>
         <item name="android:textColor">@color/accent_dark</item>
-    </style>`
+    </style>
+
+    <style name="Theme.Custom" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:listViewStyle">@style/MyListViewStyle</item>
+    </style>
+
+    <style name="MyListViewStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:background">@color/accent_dark</item>
+        <item name="android:listSelector">@color/secondary_dark</item>
+    </style>
 </resources>

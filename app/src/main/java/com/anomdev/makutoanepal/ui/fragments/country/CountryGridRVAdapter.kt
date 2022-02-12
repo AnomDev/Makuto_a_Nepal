@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemGridCountryfragmentBinding
 import com.anomdev.makutoanepal.model.CountryTopic
 import com.anomdev.makutoanepal.model.CountryTopicProvider
+import com.anomdev.makutoanepal.model.countrytopicelementproviders.PoiProvider
 import com.anomdev.makutoanepal.ui.fragments.country.topiclist.CountryTopicListActivity
 import com.bumptech.glide.Glide
 import java.security.AccessController.getContext
@@ -25,11 +26,27 @@ class CountryGridRVAdapter(val countryTopicList: List<CountryTopic>) :
     override fun onBindViewHolder(viewHolder: CountryGridRVAdapter.CountryTopicViewHolder, position: Int) {
         viewHolder.render(countryTopicList[position])
 
+
+        //TODO: En función del "topic" que se pulse, volcará en la CountryElementDetailActivity un intent con los datos del provider en cuestion
+        /*   when{
+               countryTopicElementList[position]== primer item del RV -> que se vaya a la activity con los elementos del CountryHistoryProvider
+               countryTopicElementList[position]== segundo item del RV -> que se vaya a la activity con los elementos del CountryNatureProvider
+               countryTopicElementList[position]== tercer item del RV -> que se vaya a la activity con los elementos del CountryPoiProvider
+               countryTopicElementList[position]== cuarto item del RV -> que se vaya a la activity con los elementos del CountryTrekkingsProvider
+               countryTopicElementList[position]== quinto item del RV -> que se vaya a la activity con los elementos del CountryGastronomyProvider
+               countryTopicElementList[position]== sexto item del RV -> que se vaya a la activity con los elementos del CountryOthersProvider
+           }
+        */
+
         viewHolder.cardView.setOnClickListener {
             val intent = Intent(viewHolder.binding.root.context, CountryTopicListActivity::class.java)
             //TODO: Hay que conseguir pillar el string de turno relativo al id que ahora mismo aparece.
             intent.putExtra("titleTopic", CountryTopicProvider.countryTopicsList[position].title.toString())
 
+            intent.putExtra("headerKathmandu", PoiProvider.headerKathmandu)
+            intent.putExtra("headerPokhara", PoiProvider.headerPokhara)
+            intent.putExtra("headerMountains", PoiProvider.headerMountains)
+            intent.putExtra("headerOther", PoiProvider.headerOther)
 
             Log.d("intentTOPICExtraTitle", "${intent.getStringExtra("titleTopic")}")
 
@@ -52,6 +69,7 @@ class CountryGridRVAdapter(val countryTopicList: List<CountryTopic>) :
         fun render(countryTopicList: CountryTopic) {
             val title: String = binding.tvCountryTopic.getContext().getResources().getString(countryTopicList.title)
             binding.tvCountryTopic.text = title
+
 
             Glide.with(cardView.context).load(countryTopicList.image).into(binding.ivCountryTopic)
 

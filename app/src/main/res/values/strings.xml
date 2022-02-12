@@ -69,5 +69,36 @@
     <string name="udana" translatable="false">Udana Nepal</string>
     <string name="udana_snippet">Association to help women and girls</string>
 
+    <!-- SETTINGS -->
+    <string name="title_activity_settings" translatable="false">Settings</string>
 
+    <!-- Accesibility -->
+    <string name="accesibility_title">Accesibility</string>
+    <string name="accesibility_body" translatable="false">TalkBack</string>
+
+    <!-- UI/UX -->
+    <string name="uiux_title" translatable="false">UI/UX</string>
+    <string name="uiux_body">Dark mode</string>
+
+    <!-- Language Preferences -->
+    <string name="language_title">Language</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="english" translatable="false">English</string>
+    <string name="nepali" translatable="false">नेपाली</string>
+
+    <!-- Permissions Preferences -->
+    <string name="permission_title">Permissions</string>
+    <string name="internet" translatable="false">Internet</string>
+    <string name="storage_access">Storage access</string>
+    <string name="location">Location</string>
+
+    <!-- Help Preferences -->
+    <string name="help_title">Permissions</string>
+    <string name="user_conditions">User conditions</string>
+    <string name="support_contact">Support contact</string>
+    <string name="app_info">App info</string>
+
+    <!-- Author signature -->
+    <string name="author_title">Developed by:</string>
+    <string name="author"  translatable="false">anomDev</string>
 </resources>

@@ -6,24 +6,25 @@ class CountryTopicElementProvider {
     companion object {
         val countryTopicElementsList = listOf(
             CountryTopicElement(
-                R.drawable.retrobackground,
-                "Titulo del elemento",
-                "Este es el body que pasará a la detail"
+                R.drawable.silk_sea,
+                "Sitapaila",
+                "\n" +
+                        "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
             ),
             CountryTopicElement(
                 R.drawable.bluegridbackground,
-                "Naturaleza ***",
+                "Titulo",
                 "Este es el body que pasará a la detail"
             ),
             CountryTopicElement(
                 R.drawable.app_logo,
-                "Puntos de interés ***",
+                "Titulo",
                 "Este es el body que pasará a la detail"
 
             ),
             CountryTopicElement(
                 R.drawable.topographicbackground,
-                "Rutas de montaña ***",
+                "Titulo",
                 "Este es el body que pasará a la detail"
 
             ),

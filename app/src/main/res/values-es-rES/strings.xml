@@ -44,4 +44,29 @@
     <string name="nepalsonrie_snippet">Escuela infantil en Hetauda</string>
     <string name="udana_snippet">Asociación de ayuda a la mujer y la niña nepalesa</string>
 
+    <!-- SETTINGS -->
+    <string name="title_activity_settings">Ajustes</string>
+
+    <!-- Accesibility -->
+    <string name="accesibility_title">Accesibilidad</string>
+
+    <!-- UI/UX -->
+    <string name="uiux_body">Modo oscuro</string>
+
+    <!-- Language Preferences -->
+    <string name="language_title">idioma</string>
+
+    <!-- Permissions Preferences -->
+    <string name="permission_title">Permissions</string>
+    <string name="storage_access">Acceso al almacenamiento</string>
+    <string name="location">Ubicación</string>
+
+    <!-- Help Preferences -->
+    <string name="help_title">Permisos</string>
+    <string name="user_conditions">Condiciones de uso</string>
+    <string name="support_contact">Contacto con soporte</string>
+    <string name="app_info">Información de la aplicación</string>
+
+    <!-- Author signature -->
+    <string name="author_title">Desarrollado por:</string>
 </resources>
