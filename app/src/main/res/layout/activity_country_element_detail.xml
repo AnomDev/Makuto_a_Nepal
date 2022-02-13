@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnBackCountryElementDetailActivity"
+                android:id="@+id/btnBackToCountryTopicList"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_margin="@dimen/doubleMinimunDimen"
@@ -40,7 +40,7 @@
                 android:text="Title"
                 android:textAlignment="center"
                 android:textColor="@color/secondary"
-                android:textSize="@dimen/subtitleSize" />
+                android:textSize="@dimen/titleSize" />
 
         </LinearLayout>
 

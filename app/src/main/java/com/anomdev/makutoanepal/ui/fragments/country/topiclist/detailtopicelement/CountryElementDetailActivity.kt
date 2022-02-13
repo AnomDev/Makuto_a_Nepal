@@ -46,6 +46,9 @@ class CountryElementDetailActivity : AppCompatActivity() {
             Toast.makeText(this, "Pues viene vacío el puto intent", Toast.LENGTH_LONG).show()
         }
 
+        binding.btnBackToCountryTopicList.setOnClickListener{
+            onBackButtonPressed()
+        }
     }
 
     fun onMapButtonPressed(){
@@ -55,4 +58,9 @@ class CountryElementDetailActivity : AppCompatActivity() {
             ContextCompat.startActivity(this, intent, null)
         }
     }
+
+    private fun onBackButtonPressed() {
+        finish()
+    }
+
 }

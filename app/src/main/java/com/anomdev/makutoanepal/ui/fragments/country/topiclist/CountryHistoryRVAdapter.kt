@@ -7,29 +7,27 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemCountryTopicElementBinding
-
-import com.anomdev.makutoanepal.model.countrytopicelementproviders.Poi
-import com.anomdev.makutoanepal.model.countrytopicelementproviders.PoiProvider
+import com.anomdev.makutoanepal.model.countrydata.*
 
 import com.anomdev.makutoanepal.ui.fragments.country.topiclist.detailtopicelement.CountryElementDetailActivity
 import com.bumptech.glide.Glide
 
-class CountryHistoryRVAdapter(val countryPoiList: List<Poi>) :
-RecyclerView.Adapter<CountryHistoryRVAdapter.CountryPoiViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHistoryRVAdapter.CountryPoiViewHolder {
+class CountryHistoryRVAdapter(val countryHistoryList: List<CountryData>) :
+RecyclerView.Adapter<CountryHistoryRVAdapter.CountryHistoryViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHistoryRVAdapter.CountryHistoryViewHolder {
 
         val binding = ItemCountryTopicElementBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return  CountryPoiViewHolder(binding)
+        return  CountryHistoryViewHolder(binding)
     }
 
-    override fun onBindViewHolder(viewHolder: CountryPoiViewHolder, position: Int) {
-        viewHolder.render(countryPoiList[position])
+    override fun onBindViewHolder(viewHolder: CountryHistoryViewHolder, position: Int) {
+        viewHolder.render(countryHistoryList[position])
 
         viewHolder.cardView.setOnClickListener {
             val intent = Intent(viewHolder.binding.root.context, CountryElementDetailActivity::class.java)
-            intent.putExtra("imageTopicElement", PoiProvider.poiKathmanduElementsList[position].image )
-            intent.putExtra("titleTopicElement", PoiProvider.poiKathmanduElementsList[position].title)
-            intent.putExtra("bodyTopicElement", PoiProvider.poiKathmanduElementsList[position].body)
+            intent.putExtra("imageTopicElement", CountryDataProvider.ancientHistoryList[position].image )
+            intent.putExtra("titleTopicElement", CountryDataProvider.ancientHistoryList[position].title)
+            intent.putExtra("bodyTopicElement", CountryDataProvider.ancientHistoryList[position].body)
 
             Log.d("intentTOPICExtraTitle", "${intent.getStringExtra("titleTopicElement")}")
             Log.d("intentTOPICExtraImage", "${intent.getStringExtra("imageTopicElement")}")
@@ -42,18 +40,18 @@ RecyclerView.Adapter<CountryHistoryRVAdapter.CountryPoiViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return countryPoiList.size
+        return countryHistoryList.size
     }
 
-    class CountryPoiViewHolder(val binding: ItemCountryTopicElementBinding) : RecyclerView.ViewHolder(binding.root) {
+    class CountryHistoryViewHolder(val binding: ItemCountryTopicElementBinding) : RecyclerView.ViewHolder(binding.root) {
 
 
         val cardView = binding.cvElementTopicList
 
 
-        fun render(countryPoi: Poi) {
-            binding.tvTitleElementCountryTopic.text = countryPoi.title
-            Glide.with(cardView.context).load(countryPoi.image).into(binding.ivImageElementCountryTopic)
+        fun render(countryHistory: CountryData) {
+            binding.tvTitleElementCountryTopic.text = countryHistory.title
+            Glide.with(cardView.context).load(countryHistory.image).into(binding.ivImageElementCountryTopic)
 
 
         }

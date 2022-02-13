@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemCountryTopicElementBinding
-
-import com.anomdev.makutoanepal.model.countrytopicelementproviders.Poi
-import com.anomdev.makutoanepal.model.countrytopicelementproviders.PoiProvider
+import com.anomdev.makutoanepal.model.countrydata.CountryData
+import com.anomdev.makutoanepal.model.countrydata.CountryDataProvider
 
 import com.anomdev.makutoanepal.ui.fragments.country.topiclist.detailtopicelement.CountryElementDetailActivity
 import com.bumptech.glide.Glide
 
-class CountryPoiRVAdapter(val countryPoiList: List<Poi>) :
+class CountryPoiRVAdapter(val countryPoiList: List<CountryData>) :
 RecyclerView.Adapter<CountryPoiRVAdapter.CountryPoiViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryPoiRVAdapter.CountryPoiViewHolder {
 
@@ -27,18 +26,12 @@ RecyclerView.Adapter<CountryPoiRVAdapter.CountryPoiViewHolder>() {
 
         viewHolder.cardView.setOnClickListener {
             val intent = Intent(viewHolder.binding.root.context, CountryElementDetailActivity::class.java)
-            intent.putExtra("imageTopicElement", PoiProvider.poiKathmanduElementsList[position].image )
-            intent.putExtra("titleTopicElement", PoiProvider.poiKathmanduElementsList[position].title)
-            intent.putExtra("bodyTopicElement", PoiProvider.poiKathmanduElementsList[position].body)
-
-
-
-
+            intent.putExtra("imageTopicElement", CountryDataProvider.poiKathmanduElementsList[position].image )
+            intent.putExtra("titleTopicElement", CountryDataProvider.poiKathmanduElementsList[position].title)
+            intent.putExtra("bodyTopicElement", CountryDataProvider.poiKathmanduElementsList[position].body)
 
             Log.d("intentTOPICExtraTitle", "${intent.getStringExtra("titleTopicElement")}")
             Log.d("intentTOPICExtraImage", "${intent.getStringExtra("imageTopicElement")}")
-
-
 
             ContextCompat.startActivity(viewHolder.binding.root.context, intent, null)
 
@@ -55,7 +48,7 @@ RecyclerView.Adapter<CountryPoiRVAdapter.CountryPoiViewHolder>() {
         val cardView = binding.cvElementTopicList
 
 
-        fun render(countryPoi: Poi) {
+        fun render(countryPoi: CountryData) {
             binding.tvTitleElementCountryTopic.text = countryPoi.title
             Glide.with(cardView.context).load(countryPoi.image).into(binding.ivImageElementCountryTopic)
 

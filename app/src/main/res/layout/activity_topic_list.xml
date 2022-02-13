@@ -3,20 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/tvTitleTopicDetail"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="@dimen/minimunDimen"
-        android:layout_marginTop="@dimen/minimunDimen"
-        android:layout_marginEnd="@dimen/minimunDimen"
-        android:layout_marginBottom="@dimen/minimunDimen"
-        android:text="@string/default_text"
-        android:textColor="@color/secondary_dark"
-        android:textSize="@dimen/titleSize"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackToCountryFragment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/doubleMinimunDimen"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="ᐸ"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTitleTopicDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/doubleMinimunDimen"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/titleSize" />
+
+    </LinearLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"

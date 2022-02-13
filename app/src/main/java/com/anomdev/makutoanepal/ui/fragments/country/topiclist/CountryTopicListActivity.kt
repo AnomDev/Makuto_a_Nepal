@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anomdev.makutoanepal.databinding.ActivityTopicListBinding
-import com.anomdev.makutoanepal.model.countrytopicelementproviders.PoiProvider
+import com.anomdev.makutoanepal.model.countrydata.CountryDataProvider
 
 class CountryTopicListActivity : AppCompatActivity() {
 
@@ -33,13 +33,10 @@ class CountryTopicListActivity : AppCompatActivity() {
 
             val headerKathmandu : String = intent.getStringExtra("headerKathmandu").toString()
             binding.rvFirstTitle.text = headerKathmandu
-
             val headerPokhara : String = intent.getStringExtra("headerPokhara").toString()
             binding.rvSecondTitle.text = headerPokhara
-
             val headerMountains : String = intent.getStringExtra("headerMountains").toString()
             binding.rvThirdTitle.text = headerMountains
-
             val headerOther : String = intent.getStringExtra("headerOther").toString()
             binding.rvFourthTitle.text = headerOther
         } else {
@@ -47,26 +44,35 @@ class CountryTopicListActivity : AppCompatActivity() {
 
         }
 
+        binding.btnBackToCountryFragment.setOnClickListener{
+            onBackButtonPressed()
+        }
+
     }
 
 
 
     fun initRecycler() {
+
         binding.rvFirst.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        val adapterFirst = CountryPoiRVAdapter(PoiProvider.poiKathmanduElementsList)
+        val adapterFirst = CountryPoiRVAdapter(CountryDataProvider.poiKathmanduElementsList)
         binding.rvFirst.adapter = adapterFirst
 
         binding.rvSecond.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        val adapterSecond = CountryPoiRVAdapter(PoiProvider.poiPokharaElementsList)
+        val adapterSecond = CountryPoiRVAdapter(CountryDataProvider.poiPokharaElementsList)
         binding.rvSecond.adapter = adapterSecond
 
         binding.rvThird.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        val adapterThird = CountryPoiRVAdapter(PoiProvider.poiKathmanduElementsList)
+        val adapterThird = CountryPoiRVAdapter(CountryDataProvider.poiMustangElementsList)
         binding.rvThird.adapter = adapterThird
 
         binding.rvFourth.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        val adapterFourth = CountryPoiRVAdapter(PoiProvider.poiKathmanduElementsList)
+        val adapterFourth = CountryPoiRVAdapter(CountryDataProvider.poiOtherElementsList)
         binding.rvFourth.adapter = adapterFourth
+    }
+
+    private fun onBackButtonPressed() {
+        finish()
     }
 
 }

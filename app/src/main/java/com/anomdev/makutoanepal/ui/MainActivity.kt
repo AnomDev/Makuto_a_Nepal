@@ -1,6 +1,8 @@
 package com.anomdev.makutoanepal.ui
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -22,14 +24,13 @@ class MainActivity : AppCompatActivity() {
     private val businessFragment = BusinessListFragment()
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(homeFragment)
         binding.bottomNavMenu.setOnNavigationItemSelectedListener {
-            when (it.itemId){
+            when (it.itemId) {
                 R.id.menuitem_home -> replaceFragment(homeFragment)
                 R.id.menuitem_country -> replaceFragment(countryFragment)
                 R.id.menuitem_business -> replaceFragment(businessFragment)
@@ -39,30 +40,37 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment){
-        if (fragment != null){
+    private fun replaceFragment(fragment: Fragment) {
+        if (fragment != null) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container,fragment)
+            transaction.replace(R.id.fragment_container, fragment)
             transaction.commit()
-            } else {
+        } else {
 
-            }
+        }
     }
 
-    override fun onBackPressed() {
-               val dialog = AlertDialog.Builder(this)
-               .setTitle(R.string.alert_dialog_exit_title)
-               .setMessage(R.string.alert_dialog_exit_message)
-               .setNegativeButton(R.string.alert_dialog_exit_negative_btn) { view, _ ->
-                   view.dismiss()
-               }
-               .setPositiveButton(R.string.alert_dialog_exit_positive_btn) { _, _ ->
-                   finish()
-               }
-               .setCancelable(false)
-               .create()
+    private var doubleBackToExitPressedOnce = false
 
-           dialog.show()
+    override fun onBackPressed() {
+        replaceFragment(homeFragment)
+        if(doubleBackToExitPressedOnce) {
+            val dialog = AlertDialog.Builder(this)
+                .setTitle(R.string.alert_dialog_exit_title)
+                .setMessage(R.string.alert_dialog_exit_message)
+                .setNegativeButton(R.string.alert_dialog_exit_negative_btn) { view, _ ->
+                    view.dismiss()
+                }
+                .setPositiveButton(R.string.alert_dialog_exit_positive_btn) { _, _ ->
+                    finish()
+                }
+                .setCancelable(false)
+                .create()
+
+            dialog.show()
+        }
+        this.doubleBackToExitPressedOnce = true
+        Handler(Looper.getMainLooper()).postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
 
     }
 }

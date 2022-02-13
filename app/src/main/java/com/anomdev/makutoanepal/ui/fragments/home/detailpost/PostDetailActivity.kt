@@ -4,17 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityPostDetailBinding
 import com.bumptech.glide.Glide
 
 
 class PostDetailActivity : AppCompatActivity() {
 
-    //TODO: Recuperar los datos que trae el intent del Adapter y pintarlos en esta activity
     private lateinit var binding: ActivityPostDetailBinding
 
-//    val imageView: ImageView = findViewById<ImageView>(R.id.post_detail_image_iv)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,13 +56,13 @@ class PostDetailActivity : AppCompatActivity() {
             Toast.makeText(this, "Pues viene vacío el puto intent", Toast.LENGTH_LONG).show()
         }
 
-        binding.btnBackDetailActivity.setOnClickListener{
-            onButtonPressed()
+        binding.btnBackToHomeFragment.setOnClickListener{
+            onBackButtonPressed()
         }
 
     }
 
-    private fun onButtonPressed() {
+    private fun onBackButtonPressed() {
         finish()
     }
 

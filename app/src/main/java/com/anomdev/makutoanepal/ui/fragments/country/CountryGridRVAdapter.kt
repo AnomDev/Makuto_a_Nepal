@@ -1,6 +1,5 @@
 package com.anomdev.makutoanepal.ui.fragments.country
 
-import android.R
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,10 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemGridCountryfragmentBinding
 import com.anomdev.makutoanepal.model.CountryTopic
 import com.anomdev.makutoanepal.model.CountryTopicProvider
-import com.anomdev.makutoanepal.model.countrytopicelementproviders.PoiProvider
+import com.anomdev.makutoanepal.model.countrydata.CountryDataProvider
 import com.anomdev.makutoanepal.ui.fragments.country.topiclist.CountryTopicListActivity
 import com.bumptech.glide.Glide
-import java.security.AccessController.getContext
 
 
 class CountryGridRVAdapter(val countryTopicList: List<CountryTopic>) :
@@ -43,13 +41,12 @@ class CountryGridRVAdapter(val countryTopicList: List<CountryTopic>) :
             //TODO: Hay que conseguir pillar el string de turno relativo al id que ahora mismo aparece.
             intent.putExtra("titleTopic", CountryTopicProvider.countryTopicsList[position].title.toString())
 
-            intent.putExtra("headerKathmandu", PoiProvider.headerKathmandu)
-            intent.putExtra("headerPokhara", PoiProvider.headerPokhara)
-            intent.putExtra("headerMountains", PoiProvider.headerMountains)
-            intent.putExtra("headerOther", PoiProvider.headerOther)
+            intent.putExtra("headerKathmandu", CountryDataProvider.headerKathmandu)
+            intent.putExtra("headerPokhara", CountryDataProvider.headerPokhara)
+            intent.putExtra("headerMountains", CountryDataProvider.headerMountains)
+            intent.putExtra("headerOther", CountryDataProvider.headerOther)
 
             Log.d("intentTOPICExtraTitle", "${intent.getStringExtra("titleTopic")}")
-
 
             startActivity(viewHolder.binding.root.context, intent, null)
 
