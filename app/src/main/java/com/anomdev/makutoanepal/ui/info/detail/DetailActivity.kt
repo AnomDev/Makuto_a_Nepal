@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.country.topiclist.detailtopicelement
+package com.anomdev.makutoanepal.ui.info.detail
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +7,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.anomdev.makutoanepal.databinding.ActivityCountryElementDetailBinding
-import com.anomdev.makutoanepal.model.CountryTopicElementProvider
 import com.bumptech.glide.Glide
 import com.google.android.gms.maps.MapFragment
 
-class CountryElementDetailActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCountryElementDetailBinding
 

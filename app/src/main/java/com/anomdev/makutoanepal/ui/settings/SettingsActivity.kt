@@ -1,8 +1,9 @@
-package com.anomdev.makutoanepal
+package com.anomdev.makutoanepal.ui.settings
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
+import com.anomdev.makutoanepal.R
 
 class SettingsActivity : AppCompatActivity() {
 

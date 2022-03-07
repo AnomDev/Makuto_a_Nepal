@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.country.topiclist
+package com.anomdev.makutoanepal.ui.info.nested
 
 import android.content.Intent
 import android.util.Log
@@ -8,13 +8,13 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemCountryTopicElementBinding
 import com.anomdev.makutoanepal.model.countrydata.*
+import com.anomdev.makutoanepal.ui.info.detail.DetailActivity
 
-import com.anomdev.makutoanepal.ui.fragments.country.topiclist.detailtopicelement.CountryElementDetailActivity
 import com.bumptech.glide.Glide
 
 class CountryHistoryRVAdapter(val countryHistoryList: List<CountryData>) :
 RecyclerView.Adapter<CountryHistoryRVAdapter.CountryHistoryViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHistoryRVAdapter.CountryHistoryViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryHistoryViewHolder {
 
         val binding = ItemCountryTopicElementBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return  CountryHistoryViewHolder(binding)
@@ -24,7 +24,7 @@ RecyclerView.Adapter<CountryHistoryRVAdapter.CountryHistoryViewHolder>() {
         viewHolder.render(countryHistoryList[position])
 
         viewHolder.cardView.setOnClickListener {
-            val intent = Intent(viewHolder.binding.root.context, CountryElementDetailActivity::class.java)
+            val intent = Intent(viewHolder.binding.root.context, DetailActivity::class.java)
             intent.putExtra("imageTopicElement", CountryDataProvider.ancientHistoryList[position].image )
             intent.putExtra("titleTopicElement", CountryDataProvider.ancientHistoryList[position].title)
             intent.putExtra("bodyTopicElement", CountryDataProvider.ancientHistoryList[position].body)

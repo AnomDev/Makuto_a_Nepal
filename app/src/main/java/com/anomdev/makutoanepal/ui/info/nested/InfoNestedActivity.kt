@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.country.topiclist
+package com.anomdev.makutoanepal.ui.info.nested
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.anomdev.makutoanepal.databinding.ActivityTopicListBinding
 import com.anomdev.makutoanepal.model.countrydata.CountryDataProvider
 
-class CountryTopicListActivity : AppCompatActivity() {
+class InfoNestedActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTopicListBinding
 

@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.home
+package com.anomdev.makutoanepal.ui.blog
 
 import android.content.Intent
 import android.util.Log
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.databinding.ItemBlogPostBinding
 import com.anomdev.makutoanepal.model.BlogPost
 import com.anomdev.makutoanepal.model.BlogPostProvider
-import com.anomdev.makutoanepal.ui.fragments.home.detailpost.PostDetailActivity
+import com.anomdev.makutoanepal.ui.blog.detailpost.PostDetailActivity
 import com.bumptech.glide.Glide
 
 

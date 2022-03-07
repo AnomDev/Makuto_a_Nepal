@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.business
+package com.anomdev.makutoanepal.ui.business
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

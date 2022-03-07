@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.home.detailpost
+package com.anomdev.makutoanepal.ui.blog.detailpost
 
 import android.os.Bundle
 import android.util.Log

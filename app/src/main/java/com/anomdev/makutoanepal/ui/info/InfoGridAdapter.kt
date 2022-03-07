@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.fragments.country
+package com.anomdev.makutoanepal.ui.info
 
 import android.content.Intent
 import android.util.Log
@@ -10,18 +10,18 @@ import com.anomdev.makutoanepal.databinding.ItemGridCountryfragmentBinding
 import com.anomdev.makutoanepal.model.CountryTopic
 import com.anomdev.makutoanepal.model.CountryTopicProvider
 import com.anomdev.makutoanepal.model.countrydata.CountryDataProvider
-import com.anomdev.makutoanepal.ui.fragments.country.topiclist.CountryTopicListActivity
+import com.anomdev.makutoanepal.ui.info.nested.InfoNestedActivity
 import com.bumptech.glide.Glide
 
 
-class CountryGridRVAdapter(val countryTopicList: List<CountryTopic>) :
-    RecyclerView.Adapter<CountryGridRVAdapter.CountryTopicViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryGridRVAdapter.CountryTopicViewHolder {
+class InfoGridAdapter(val countryTopicList: List<CountryTopic>) :
+    RecyclerView.Adapter<InfoGridAdapter.CountryTopicViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryTopicViewHolder {
         val binding = ItemGridCountryfragmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return  CountryGridRVAdapter.CountryTopicViewHolder(binding)
+        return  CountryTopicViewHolder(binding)
     }
 
-    override fun onBindViewHolder(viewHolder: CountryGridRVAdapter.CountryTopicViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: CountryTopicViewHolder, position: Int) {
         viewHolder.render(countryTopicList[position])
 
 
@@ -37,7 +37,7 @@ class CountryGridRVAdapter(val countryTopicList: List<CountryTopic>) :
         */
 
         viewHolder.cardView.setOnClickListener {
-            val intent = Intent(viewHolder.binding.root.context, CountryTopicListActivity::class.java)
+            val intent = Intent(viewHolder.binding.root.context, InfoNestedActivity::class.java)
             //TODO: Hay que conseguir pillar el string de turno relativo al id que ahora mismo aparece.
             intent.putExtra("titleTopic", CountryTopicProvider.countryTopicsList[position].title.toString())
 
