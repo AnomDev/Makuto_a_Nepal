@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityMainBinding
 import com.anomdev.makutoanepal.ui.business.BusinessListFragment
-import com.anomdev.makutoanepal.ui.info.InfoGridFragment
+import com.anomdev.makutoanepal.ui.info.CategoriesFragment
 import com.anomdev.makutoanepal.ui.map.MapFragment
 import com.anomdev.makutoanepal.ui.blog.BlogFragment
 
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     //    private lateinit var navController: NavController
     private val homeFragment = BlogFragment()
-    private val countryFragment = InfoGridFragment()
+    private val countryFragment = CategoriesFragment()
     private val mapFragment = MapFragment()
     private val businessFragment = BusinessListFragment()
 

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anomdev.makutoanepal.databinding.ActivityTopicListBinding
 import com.anomdev.makutoanepal.model.countrydata.CountryDataProvider
-
+const val EXTRA_CATEGORY = "EXTRA_CATEGORY"
 class InfoNestedActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTopicListBinding
@@ -27,6 +27,8 @@ class InfoNestedActivity : AppCompatActivity() {
         }
 
         if (intent.extras != null) {
+            val category= intent.getSerializableExtra("EXTRA_CATEGORY").toString()
+            Toast.makeText(this, "category: $category", Toast.LENGTH_SHORT).show()
 
             val titleTopic: String = intent.getStringExtra("titleTopic").toString()
             binding.tvTitleTopicDetail.text = titleTopic
