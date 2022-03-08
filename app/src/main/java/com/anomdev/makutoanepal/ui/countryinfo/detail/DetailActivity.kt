@@ -1,15 +1,16 @@
-package com.anomdev.makutoanepal.ui.info.detail
+package com.anomdev.makutoanepal.ui.countryinfo.detail
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.anomdev.makutoanepal.databinding.ActivityCountryElementDetailBinding
 import com.bumptech.glide.Glide
 import com.google.android.gms.maps.MapFragment
-
+const val EXTRA_TITLE = "EXTRA_TITLE"
+const val EXTRA_SUBTITLE = "EXTRA_SUBTITLE"
+const val EXTRA_IMAGE = "EXTRA_IMAGE"
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCountryElementDetailBinding
@@ -22,23 +23,17 @@ class DetailActivity : AppCompatActivity() {
 
         onMapButtonPressed()
 
-        Log.d("getExtraTOPICTitle", intent.getStringExtra("titleTopic").toString())
-
-        if (binding == null) {
-            Log.d("bindingNull", intent.extras.toString())
-
-        }
 
         if (intent.extras != null) {
 
 
-            val imageTopicElement: Int = intent.getIntExtra("imageTopicElement",1).toInt()
+            val imageTopicElement: Int = intent.getIntExtra(EXTRA_IMAGE,1)
             Glide.with(this).load(imageTopicElement).into(binding.ivImageCountryElementDetail)
 
-            val titleTopicElement: String = intent.getStringExtra("titleTopicElement").toString()
+            val titleTopicElement: String = intent.getStringExtra(EXTRA_TITLE).toString()
             binding.tvTitleCountryElement.text = titleTopicElement
 
-            val bodyTopicElement: String = intent.getStringExtra("bodyTopicElement").toString()
+            val bodyTopicElement: String = intent.getStringExtra(EXTRA_SUBTITLE).toString()
             binding.tvBodyCountryElementDetail.text = bodyTopicElement
 
         } else {
@@ -50,7 +45,7 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    fun onMapButtonPressed(){
+    private fun onMapButtonPressed(){
        binding.btnViewMap.setOnClickListener {
            //TODO: Esto falla principalmente porque no es una Activity a donde vamos, sino un fragment
            val intent = Intent(this, MapFragment::class.java)

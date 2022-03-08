@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.ui.info
+package com.anomdev.makutoanepal.ui.countryinfo
 
 import android.os.Bundle
 import android.view.LayoutInflater

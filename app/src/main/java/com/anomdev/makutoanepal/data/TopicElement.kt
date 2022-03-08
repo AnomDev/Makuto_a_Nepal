@@ -1,6 +1,6 @@
 package com.anomdev.makutoanepal.data
 
-data class TopicItem(
+data class TopicElement(
     val image: Int,
     val title: String,
     val subtitle: String

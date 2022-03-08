@@ -14,7 +14,7 @@
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:label="@string/title_activity_settings"></activity>
-        <activity android:name=".ui.info.detail.DetailActivity" />
+        <activity android:name=".ui.countryinfo.detail.DetailActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -33,7 +33,7 @@
         </activity>
         <activity android:name=".ui.MainActivity" />
         <activity android:name="com.anomdev.makutoanepal.ui.blog.detailpost.PostDetailActivity" />
-        <activity android:name=".ui.info.nested.InfoNestedActivity" />
+        <activity android:name=".ui.countryinfo.category.InfoNestedActivity" />
     </application>
 
 </manifest>

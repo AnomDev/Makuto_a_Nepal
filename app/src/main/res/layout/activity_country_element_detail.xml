@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.info.detail.DetailActivity">
+    tools:context=".ui.countryinfo.detail.DetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,13 +82,12 @@
             android:id="@+id/btnViewMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="See on map"
-            android:textSize="@dimen/doubleMinimunDimen"
-            android:textColor="@color/secondary"
-            android:backgroundTint="@color/primary"
             android:layout_margin="@dimen/minimunDimen"
+            android:backgroundTint="@color/primary"
             android:elevation="@dimen/minimunDimen"
-            />
+            android:text="See on map"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/doubleMinimunDimen" />
 
     </LinearLayout>
 

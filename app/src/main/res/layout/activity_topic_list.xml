@@ -1,164 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnBackToCountryFragment"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="@dimen/doubleMinimunDimen"
-            android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:text="ᐸ"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvTitleTopicDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/doubleMinimunDimen"
-            android:gravity="center"
-            android:justificationMode="inter_word"
-            android:text="Title"
-            android:textAlignment="center"
-            android:textColor="@color/secondary"
-            android:textSize="@dimen/titleSize" />
-
-    </LinearLayout>
-
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        tools:context=".ui.info.detail.DetailActivity">
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fitsSystemWindows="true">
 
 
         <LinearLayout
-            android:id="@+id/recyclerContainer"
-            android:layout_width="wrap_content"
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <!--TODO: Colocar una progressbar para mientras carguen los RV-->
-            <!--<com.google.android.material.card.MaterialCardView
-                android:id="@+id/loadingBarHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:elevation="10dp"
-                app:cardMaxElevation="10dp"
-                app:cardElevation="10dp"
-                android:visibility="gone">
-                <ProgressBar
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/accent"
-                    android:foregroundTint="@color/accent"
-                    android:indeterminateTint="@color/accent"
-                    android:layout_gravity="center" />
-            </com.google.android.material.card.MaterialCardView>-->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="@dimen/minimunDimen"
-                android:background="@color/primary" />
-            <TextView
-                android:id="@+id/rvFirstTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/default_text"
-                android:textColor="@color/secondary"
-                android:textSize="@dimen/tripleMinimunDimen" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvFirst"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="@dimen/minimunDimen"
-                android:background="@color/primary" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackToCountryFragment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/doubleMinimunDimen"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="ᐸ"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/rvSecondTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/default_text"
-                android:textColor="@color/secondary"
-                android:textSize="@dimen/tripleMinimunDimen" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvSecond"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp" />
-
-            <View
+                android:id="@+id/tvTitleTopicDetail"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="@dimen/minimunDimen"
-                android:background="@color/primary" />
-
-            <TextView
-                android:id="@+id/rvThirdTitle"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/default_text"
+                android:layout_margin="@dimen/doubleMinimunDimen"
+                android:gravity="center"
+                android:textAlignment="center"
                 android:textColor="@color/secondary"
-                android:textSize="@dimen/tripleMinimunDimen" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvThird"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="@dimen/minimunDimen"
-                android:background="@color/primary" />
-
-            <TextView
-                android:id="@+id/rvFourthTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/default_text"
-                android:textColor="@color/secondary"
-                android:textSize="@dimen/tripleMinimunDimen" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvFourth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="@dimen/minimunDimen"
-                android:background="@color/primary" />
+                android:textSize="@dimen/titleSize" />
 
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/parent_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

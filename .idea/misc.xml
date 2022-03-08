@@ -4,11 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2972222222222222" />
+        <entry key="app/src/main/res/layout-v26/activity_topic_list.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/activity_country_element_detail.xml" value="0.13518518518518519" />
         <entry key="app/src/main/res/layout/activity_topic_list.xml" value="0.13518518518518519" />
         <entry key="app/src/main/res/layout/fragment_associations_list.xml" value="0.10840932117527863" />
         <entry key="app/src/main/res/layout/fragment_country.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_country_topic_element.xml" value="0.22780797101449277" />
         <entry key="app/src/main/res/layout/item_grid_countryfragment.xml" value="0.1889564336372847" />
+        <entry key="app/src/main/res/layout/item_topic_child.xml" value="0.22780797101449277" />
+        <entry key="app/src/main/res/layout/item_topic_parent.xml" value="0.1638888888888889" />
       </map>
     </option>
   </component>

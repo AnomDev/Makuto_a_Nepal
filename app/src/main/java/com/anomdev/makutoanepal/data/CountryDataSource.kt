@@ -30,11 +30,11 @@ class CountryDataSourceImpl : CountryDataSource {
         delay(2000)
         return when (categoryType) {
             CategoryType.CULTURE -> retrieveHistoryAndCulture()
-            CategoryType.NATURE -> TODO()
+            CategoryType.NATURE -> retrieveNature()
             CategoryType.POI -> retrievePOIs()
-            CategoryType.TREKKING -> TODO()
-            CategoryType.GASTRONOMY -> TODO()
-            CategoryType.OTHERS -> TODO()
+            CategoryType.TREKKING -> retrieveTrekking()
+            CategoryType.GASTRONOMY -> retrieveGastronomy()
+            CategoryType.OTHERS -> retrieveOthers()
         }
     }
 
@@ -77,22 +77,22 @@ class CountryDataSourceImpl : CountryDataSource {
         Topic(
             "Historia",
             listOf(
-                TopicItem(
+                TopicElement(
                     R.drawable.silk_sea,
                     "Historia antigua",
                     "Siglo IV a.e.c hasta s. VIII e.c."
                 ),
-                TopicItem(
+                TopicElement(
                     R.drawable.bluegridbackground,
                     "Historia medieval",
                     "Siglo IX e.c. hasta s.XVII e.c"
                 ),
-                TopicItem(
+                TopicElement(
                     R.drawable.bluegridbackground,
                     "Historia moderna",
                     "Siglo XVIII e.c. hasta s. XIX e.c"
                 ),
-                TopicItem(
+                TopicElement(
                     R.drawable.bluegridbackground,
                     "Historia contemporánea",
                     "Siglo XX e.c hasta nuestros días (dinastia rana, revolución de 1951, sistema panchayat, democracia, guerra civil, república y actualidad)"
@@ -102,22 +102,22 @@ class CountryDataSourceImpl : CountryDataSource {
         Topic(
             "Cultura",
             listOf(
-                TopicItem(
+                TopicElement(
                     R.drawable.silk_sea,
                     "Arte",
                     "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
                 ),
-                TopicItem(
+                TopicElement(
                     R.drawable.bluegridbackground,
                     "Lenguas",
                     "Este es el body que pasará a la detail"
                 ),
-                TopicItem(
+                TopicElement(
                     R.drawable.silk_sea,
                     "Religión",
                     "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
                 ),
-                TopicItem(
+                TopicElement(
                     R.drawable.bluegridbackground,
                     "Festividades",
                     "Este es el body que pasará a la detail"
@@ -133,35 +133,35 @@ class CountryDataSourceImpl : CountryDataSource {
             Topic(
                 "Área de Katmandú",
                 listOf(
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_sitapaila,
                         "Sitapaila",
                         "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_tergar,
                         "Tergar Osel Ling",
                         "Este es el body que pasará a la detail"
 
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_swayambhu,
                         "Swayambhunath",
                         "Este es el body que pasará a la detail"
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_pashu,
                         "Pashupatinath",
                         "Este es el body que pasará a la detail"
 
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_durbar,
                         "Durbar square",
                         "Este es el body que pasará a la detail"
 
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_boudha,
                         "Boudhanath",
                         "Este es el body que pasará a la detail"
@@ -172,19 +172,19 @@ class CountryDataSourceImpl : CountryDataSource {
             Topic(
                 "Area de Pokhara",
                 listOf(
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_worldpeace,
                         "World Peace Stupa",
                         "\n" +
                                 "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_sarangkot,
                         "Sarangkot",
                         "Este es el body que pasará a la detail"
 
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_phewa,
                         "Phewa lake",
                         "Este es el body que pasará a la detail"
@@ -194,18 +194,18 @@ class CountryDataSourceImpl : CountryDataSource {
             Topic(
                 "Area de Mustang",
                 listOf(
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_lomanthang,
                         "Lo Manthang",
                         "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_kagbeni,
                         "Kagbeni",
                         "Este es el body que pasará a la detail"
 
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_jomsom,
                         "Jomsom",
                         "Este es el body que pasará a la detail"
@@ -215,18 +215,18 @@ class CountryDataSourceImpl : CountryDataSource {
             Topic(
                 "Otras regiones",
                 listOf(
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_lumbini,
                         "Lumbini",
                         "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_terai,
                         "Terai",
                         "Este es el body que pasará a la detail"
 
                     ),
-                    TopicItem(
+                    TopicElement(
                         R.drawable.cte_poi_biratnagar,
                         "Biratnagar",
                         "Este es el body que pasará a la detail"
@@ -236,4 +236,147 @@ class CountryDataSourceImpl : CountryDataSource {
             )
         )
     }
+
+    private fun retrieveNature() = listOf(
+        Topic(
+            "Montanias",
+            listOf(
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Montanias1",
+                    "Siglo IV a.e.c hasta s. VIII e.c."
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Montanias2",
+                    "Siglo IX e.c. hasta s.XVII e.c"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Montanias3",
+                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                )
+            )
+        ),
+        Topic(
+            "Bosques",
+            listOf(
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Bosque1",
+                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Bosque2",
+                    "Este es el body que pasará a la detail"
+                ),
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Bosque3",
+                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                )
+            )
+        )
+    )
+
+    private fun retrieveTrekking() = listOf(
+        Topic(
+            "Trekking",
+            listOf(
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Trekking1",
+                    "Siglo IV a.e.c hasta s. VIII e.c."
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Trekking2",
+                    "Siglo IX e.c. hasta s.XVII e.c"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Trekking3",
+                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                )
+            )
+        )
+    )
+
+    private fun retrieveGastronomy() = listOf(
+        Topic(
+            "Comida",
+            listOf(
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Comida1",
+                    "Siglo IV a.e.c hasta s. VIII e.c."
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Comida2",
+                    "Siglo IX e.c. hasta s.XVII e.c"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Comida3",
+                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Comida4",
+                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Comida5",
+                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                )
+            )
+        ),
+        Topic(
+            "Postres",
+            listOf(
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Postres1",
+                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Postres2",
+                    "Este es el body que pasará a la detail"
+                ),
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Postres3",
+                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                )
+            )
+        )
+    )
+
+    private fun retrieveOthers() = listOf(
+        Topic(
+            "Other",
+            listOf(
+                TopicElement(
+                    R.drawable.silk_sea,
+                    "Other1",
+                    "Siglo IV a.e.c hasta s. VIII e.c."
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Other2",
+                    "Siglo IX e.c. hasta s.XVII e.c"
+                ),
+                TopicElement(
+                    R.drawable.bluegridbackground,
+                    "Other3",
+                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                )
+            )
+        )
+    )
+
 }

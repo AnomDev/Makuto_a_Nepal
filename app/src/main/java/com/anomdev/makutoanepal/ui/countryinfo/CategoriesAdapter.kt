@@ -1,15 +1,14 @@
-package com.anomdev.makutoanepal.ui.info
+package com.anomdev.makutoanepal.ui.countryinfo
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.data.Category
 import com.anomdev.makutoanepal.databinding.ItemGridCountryfragmentBinding
-import com.anomdev.makutoanepal.ui.info.nested.EXTRA_CATEGORY
-import com.anomdev.makutoanepal.ui.info.nested.InfoNestedActivity
+import com.anomdev.makutoanepal.ui.countryinfo.category.EXTRA_CATEGORY
+import com.anomdev.makutoanepal.ui.countryinfo.category.InfoNestedActivity
 import com.bumptech.glide.Glide
 
 

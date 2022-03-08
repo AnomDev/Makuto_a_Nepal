@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityMainBinding
 import com.anomdev.makutoanepal.ui.business.BusinessListFragment
-import com.anomdev.makutoanepal.ui.info.CategoriesFragment
+import com.anomdev.makutoanepal.ui.countryinfo.CategoriesFragment
 import com.anomdev.makutoanepal.ui.map.MapFragment
 import com.anomdev.makutoanepal.ui.blog.BlogFragment
 
