@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 const val EXTRA_CATEGORY = "EXTRA_CATEGORY"
 
-class InfoNestedActivity : AppCompatActivity() {
+class CategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTopicListBinding
     private val repo = CountryRepository()
@@ -22,10 +22,6 @@ class InfoNestedActivity : AppCompatActivity() {
         binding = ActivityTopicListBinding.inflate(layoutInflater)
         initRecycler()
         setContentView(binding.root)
-
-
-
-
         binding.btnBackToCountryFragment.setOnClickListener {
             onBackButtonPressed()
         }
@@ -34,7 +30,7 @@ class InfoNestedActivity : AppCompatActivity() {
 
 
     private fun initRecycler() {
-        val category: CategoryType = intent.getSerializableExtra("EXTRA_CATEGORY") as CategoryType
+        val category: CategoryType = intent.getSerializableExtra(EXTRA_CATEGORY) as CategoryType
         Toast.makeText(this, "category: $category", Toast.LENGTH_SHORT).show()
         binding.parentRecyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
