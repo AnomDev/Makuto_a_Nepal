@@ -1,21 +1,19 @@
 package com.anomdev.makutoanepal.ui.countryinfo.category
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anomdev.makutoanepal.data.CategoryType
-import com.anomdev.makutoanepal.data.CountryRepository
 import com.anomdev.makutoanepal.databinding.ActivityTopicListBinding
-import kotlinx.coroutines.launch
 
 const val EXTRA_CATEGORY = "EXTRA_CATEGORY"
 
 class CategoryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTopicListBinding
-    private val repo = CountryRepository()
+    private lateinit var viewModel: CategoryViewModel
+    private lateinit var factory: CategoryViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,17 +23,19 @@ class CategoryActivity : AppCompatActivity() {
         binding.btnBackToCountryFragment.setOnClickListener {
             onBackButtonPressed()
         }
-
     }
 
 
     private fun initRecycler() {
         val category: CategoryType = intent.getSerializableExtra(EXTRA_CATEGORY) as CategoryType
-        Toast.makeText(this, "category: $category", Toast.LENGTH_SHORT).show()
         binding.parentRecyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        lifecycleScope.launch {
-            val parentAdapter = ParentRVAdapter(repo.getTopicInformation(category))
+
+        factory = CategoryViewModelFactory(category)
+        viewModel = ViewModelProvider(this, factory).get(CategoryViewModel::class.java)
+
+        viewModel.topics.observe(this) { topics ->
+            val parentAdapter = ParentRVAdapter(topics)
             binding.parentRecyclerView.adapter = parentAdapter
         }
     }

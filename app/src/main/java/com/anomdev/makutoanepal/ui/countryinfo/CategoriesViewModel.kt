@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.anomdev.makutoanepal.data.Category
 import com.anomdev.makutoanepal.data.CountryRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CategoriesViewModel : ViewModel() {
@@ -17,7 +18,7 @@ class CategoriesViewModel : ViewModel() {
         get() = _categories
 
     init {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             val categories = repo.getCategories()
             _categories.postValue(categories)
         }

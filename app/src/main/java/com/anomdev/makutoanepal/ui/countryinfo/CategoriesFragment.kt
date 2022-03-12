@@ -25,9 +25,9 @@ class CategoriesFragment : Fragment() {
     }
 
     private fun observeData() {
-        viewModel.categories.observe(this@CategoriesFragment, { categories ->
+        viewModel.categories.observe(viewLifecycleOwner) { categories ->
             val adapter = CategoriesAdapter(categories)
             binding.rvCountryTopics.adapter = adapter
-        })
+        }
     }
 }
