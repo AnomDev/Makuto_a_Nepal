@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(homeFragment)
+        if (savedInstanceState == null)
+            replaceFragment(homeFragment)
         binding.bottomNavMenu.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.menuitem_home -> replaceFragment(homeFragment)
