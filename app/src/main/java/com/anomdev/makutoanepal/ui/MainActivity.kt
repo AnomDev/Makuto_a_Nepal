@@ -8,18 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityMainBinding
-import com.anomdev.makutoanepal.ui.fragments.business.BusinessListFragment
-import com.anomdev.makutoanepal.ui.fragments.country.CountryFragment
-import com.anomdev.makutoanepal.ui.fragments.map.MapFragment
-import com.anomdev.makutoanepal.ui.fragments.home.HomeFragment
+import com.anomdev.makutoanepal.ui.business.BusinessListFragment
+import com.anomdev.makutoanepal.ui.countryinfo.CategoriesFragment
+import com.anomdev.makutoanepal.ui.map.MapFragment
+import com.anomdev.makutoanepal.ui.blog.BlogFragment
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     //    private lateinit var navController: NavController
-    private val homeFragment = HomeFragment()
-    private val countryFragment = CountryFragment()
+    private val homeFragment = BlogFragment()
+    private val countryFragment = CategoriesFragment()
     private val mapFragment = MapFragment()
     private val businessFragment = BusinessListFragment()
 
@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(homeFragment)
+        if (savedInstanceState == null)
+            replaceFragment(homeFragment)
         binding.bottomNavMenu.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.menuitem_home -> replaceFragment(homeFragment)

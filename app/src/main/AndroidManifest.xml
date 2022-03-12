@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Makutonepal">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.settings.SettingsActivity"
             android:label="@string/title_activity_settings"></activity>
-        <activity android:name=".ui.fragments.country.topiclist.detailtopicelement.CountryElementDetailActivity" />
+        <activity android:name=".ui.countryinfo.detail.DetailActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -32,8 +32,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity" />
-        <activity android:name=".ui.fragments.home.detailpost.PostDetailActivity" />
-        <activity android:name=".ui.fragments.country.topiclist.CountryTopicListActivity" />
+        <activity android:name="com.anomdev.makutoanepal.ui.blog.detailpost.PostDetailActivity" />
+        <activity android:name=".ui.countryinfo.category.CategoryActivity" />
     </application>
 
 </manifest>
