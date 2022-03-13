@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.model
+package com.anomdev.makutoanepal.data
 
 data class BlogPost (
     val image: String,

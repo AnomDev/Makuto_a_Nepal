@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity" />
-        <activity android:name="com.anomdev.makutoanepal.ui.blog.detailpost.PostDetailActivity" />
+        <activity android:name="com.anomdev.makutoanepal.ui.blog.detailpost.BlogPostDetailActivity" />
         <activity android:name=".ui.countryinfo.category.CategoryActivity" />
     </application>
 

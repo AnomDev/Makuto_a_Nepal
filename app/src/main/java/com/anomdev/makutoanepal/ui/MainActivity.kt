@@ -11,14 +11,14 @@ import com.anomdev.makutoanepal.databinding.ActivityMainBinding
 import com.anomdev.makutoanepal.ui.business.BusinessListFragment
 import com.anomdev.makutoanepal.ui.countryinfo.CategoriesFragment
 import com.anomdev.makutoanepal.ui.map.MapFragment
-import com.anomdev.makutoanepal.ui.blog.BlogFragment
+import com.anomdev.makutoanepal.ui.blog.BlogPostsFragment
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
     //    private lateinit var navController: NavController
-    private val homeFragment = BlogFragment()
+    private val homeFragment = BlogPostsFragment()
     private val countryFragment = CategoriesFragment()
     private val mapFragment = MapFragment()
     private val businessFragment = BusinessListFragment()

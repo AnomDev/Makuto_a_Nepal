@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.anomdev.makutoanepal.databinding.ActivityPostDetailBinding
 import com.bumptech.glide.Glide
 
+const val EXTRA_BLOGPOST = "EXTRA_BLOGPOST"
 
-class PostDetailActivity : AppCompatActivity() {
+class BlogPostDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPostDetailBinding
 
