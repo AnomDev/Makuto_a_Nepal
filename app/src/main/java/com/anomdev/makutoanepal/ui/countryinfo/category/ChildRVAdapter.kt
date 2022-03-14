@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.data.country.TopicElement
 import com.anomdev.makutoanepal.databinding.ItemTopicChildBinding
 import com.anomdev.makutoanepal.ui.countryinfo.detail.DetailActivity
-import com.anomdev.makutoanepal.ui.countryinfo.detail.EXTRA_IMAGE
-import com.anomdev.makutoanepal.ui.countryinfo.detail.EXTRA_SUBTITLE
-import com.anomdev.makutoanepal.ui.countryinfo.detail.EXTRA_TITLE
+import com.anomdev.makutoanepal.ui.countryinfo.detail.DetailActivity.Companion.EXTRA_TOPIC_ELEMENT
 import com.bumptech.glide.Glide
 
 open class ChildMembersAdapter(private var elements: List<TopicElement>) :
@@ -35,10 +33,7 @@ open class ChildMembersAdapter(private var elements: List<TopicElement>) :
         viewHolder.cardView.setOnClickListener {
             with(elements[position]) {
                 val intent = Intent(viewHolder.binding.root.context, DetailActivity::class.java)
-                //TODO use a bundle instead?
-                intent.putExtra(EXTRA_TITLE, this.title)
-                intent.putExtra(EXTRA_SUBTITLE, this.subtitle)
-                intent.putExtra(EXTRA_IMAGE, this.image)
+                intent.putExtra(EXTRA_TOPIC_ELEMENT, this)
                 ContextCompat.startActivity(viewHolder.binding.root.context, intent, null)
             }
         }
