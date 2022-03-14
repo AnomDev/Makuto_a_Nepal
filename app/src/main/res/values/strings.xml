@@ -100,5 +100,5 @@
 
     <!-- Author signature -->
     <string name="author_title">Developed by:</string>
-    <string name="author"  translatable="false">anomDev</string>
+    <string name="author"  translatable="false">Awoenji &amp; anomDev</string>
 </resources>
