@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.data.blogpost.BlogPost
 import com.anomdev.makutoanepal.databinding.ItemBlogPostBinding
 import com.anomdev.makutoanepal.ui.blog.detailpost.BlogPostDetailActivity
+import com.anomdev.makutoanepal.ui.blog.detailpost.EXTRA_BLOGPOST
 import com.bumptech.glide.Glide
 
 
@@ -34,16 +35,12 @@ class BlogPostsAdapter(private val blogPostsList: List<BlogPost>) :
 
         viewHolder.cardView.setOnClickListener {
 
-//            itemClickListener.OnItemClick()
-
-            val intent = Intent(viewHolder.binding.root.context, BlogPostDetailActivity::class.java)
-            //TODO: Hay que pasar el objeto completo no cada elemento (parcelable)
-            intent.putExtra("imagePost", blogPostsList[position].image)
-            intent.putExtra("titlePost", blogPostsList[position].title)
-            intent.putExtra("bodyPost", blogPostsList[position].body)
-            intent.putExtra("datePost", blogPostsList[position].date)
-
+            val intent =
+                Intent(viewHolder.binding.root.context, BlogPostDetailActivity::class.java)
+            intent.putExtra(EXTRA_BLOGPOST, blogPostsList[position])
             startActivity(viewHolder.binding.root.context, intent, null)
+
+
         }
 
     }

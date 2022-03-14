@@ -21,8 +21,8 @@ class CountryModule {
 
     @Provides
     @Singleton
-    fun provideCountryRepository(countryDatasource: CountryDataSource): CountryRepository {
-        return CountryRepository(countryDatasource)
+    fun provideCountryRepository(countryDataSource: CountryDataSource): CountryRepository {
+        return CountryRepository(countryDataSource)
     }
 
 }

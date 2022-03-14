@@ -1,6 +1,7 @@
 package com.anomdev.makutoanepal.ui.countryinfo.category
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +22,8 @@ class CategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTopicListBinding.inflate(layoutInflater)
+        binding.progressCategory.visibility = View.VISIBLE
+
         initRecycler()
         setContentView(binding.root)
         binding.btnBackToCountryFragment.setOnClickListener {
@@ -37,6 +40,8 @@ class CategoryActivity : AppCompatActivity() {
         viewModel.topics.observe(this) { topics ->
             val parentAdapter = ParentRVAdapter(topics)
             binding.parentRecyclerView.adapter = parentAdapter
+            binding.progressCategory.visibility = View.GONE
+
         }
     }
 

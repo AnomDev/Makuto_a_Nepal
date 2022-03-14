@@ -31,11 +31,10 @@ open class ChildMembersAdapter(private var elements: List<TopicElement>) :
 
         //TODO expose this listener outside the adapter
         viewHolder.cardView.setOnClickListener {
-            with(elements[position]) {
-                val intent = Intent(viewHolder.binding.root.context, DetailActivity::class.java)
-                intent.putExtra(EXTRA_TOPIC_ELEMENT, this)
-                ContextCompat.startActivity(viewHolder.binding.root.context, intent, null)
-            }
+            val intent = Intent(viewHolder.binding.root.context, DetailActivity::class.java)
+            intent.putExtra(EXTRA_TOPIC_ELEMENT, elements[position])
+            ContextCompat.startActivity(viewHolder.binding.root.context, intent, null)
+
         }
     }
 

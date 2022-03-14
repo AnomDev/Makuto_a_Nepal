@@ -22,6 +22,8 @@ class CategoriesFragment : Fragment() {
     ): View {
         _binding = FragmentCountryBinding.inflate(inflater, container, false)
         binding.rvCountryTopics.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.progressCategories.visibility = View.VISIBLE
+
         observeData()
         return binding.root
     }
@@ -30,6 +32,8 @@ class CategoriesFragment : Fragment() {
         viewModel.categories.observe(viewLifecycleOwner) { categories ->
             val adapter = CategoriesAdapter(categories)
             binding.rvCountryTopics.adapter = adapter
+            binding.progressCategories.visibility = View.GONE
+
         }
     }
 }

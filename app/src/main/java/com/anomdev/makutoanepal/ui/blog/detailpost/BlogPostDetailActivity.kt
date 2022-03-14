@@ -4,15 +4,20 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.anomdev.makutoanepal.data.blogpost.BlogPost
 import com.anomdev.makutoanepal.databinding.ActivityPostDetailBinding
 import com.bumptech.glide.Glide
+import java.lang.IllegalStateException
 
 const val EXTRA_BLOGPOST = "EXTRA_BLOGPOST"
 
 class BlogPostDetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityPostDetailBinding
+    companion object {
+        const val EXTRA_BLOGPOST = "EXTRA_BLOGPOST"
+    }
 
+    private lateinit var binding: ActivityPostDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,28 +41,22 @@ class BlogPostDetailActivity : AppCompatActivity() {
 
         if (intent.extras != null) {
 
-            val imagePost: String = intent.getStringExtra("imagePost").toString()
-            Glide.with(this).load(imagePost).into(binding.ivImageDetailActivity)
+            val blogPost = intent.getParcelableExtra<BlogPost>(EXTRA_BLOGPOST)
+                ?: throw IllegalStateException("\"Blog post is not included in the intent")
 
-            val titlePost: String = intent.getStringExtra("titlePost").toString()
-            binding.tvPostTitleDetailActivity.text = titlePost
+            with (blogPost){
+                Glide.with(this@BlogPostDetailActivity).load(image).into(binding.imageBlogPostDetail)
+                binding.tvPostTitleDetailActivity.text = title
+                binding.tvDateActivityDetail.text = date
+                binding.tvBodyPostDetailActivity.text = body
 
-            val datePost: String = intent.getStringExtra("datePost").toString()
-            binding.tvDateActivityDetail.text = datePost
-
-            val bodyPost: String = intent.getStringExtra("bodyPost").toString()
-            binding.tvBodyPostDetailActivity.text = bodyPost
-
-//            Log.d("getExtraImage", "$imagePost")
-            Log.d("getExtraTitle", "$titlePost")
-            Log.d("getExtraDate", datePost)
-            Log.d("getExtraBody", "$bodyPost")
+            }
 
         } else {
             Toast.makeText(this, "Pues viene vacío el puto intent", Toast.LENGTH_LONG).show()
         }
 
-        binding.btnBackToHomeFragment.setOnClickListener{
+        binding.btnBackToHomeFragment.setOnClickListener {
             onBackButtonPressed()
         }
 

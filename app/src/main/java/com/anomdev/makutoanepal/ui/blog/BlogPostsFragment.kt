@@ -11,8 +11,9 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.anomdev.makutoanepal.databinding.FragmentBlogpostsBinding
 import com.anomdev.makutoanepal.ui.settings.SettingsActivity
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class BlogPostsFragment : Fragment() {
 
     private var _binding: FragmentBlogpostsBinding? = null
@@ -28,17 +29,20 @@ class BlogPostsFragment : Fragment() {
 
         binding.rvBlogPosts.layoutManager = LinearLayoutManager(requireContext())
 
-
         observeData()
+        binding.progressBlogPosts.visibility = View.VISIBLE
+
         onSettingsButtonClicked()
         return binding.root
 
     }
 
     private fun observeData() {
-        viewModel.blogPosts.observe(viewLifecycleOwner) { blogPosts ->
+                viewModel.blogPosts.observe(viewLifecycleOwner) { blogPosts ->
             val adapter = BlogPostsAdapter(blogPosts)
             binding.rvBlogPosts.adapter = adapter
+            binding.progressBlogPosts.visibility = View.GONE
+
         }
     }
 
