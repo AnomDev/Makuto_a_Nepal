@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.anomdev.makutoanepal.data.Topic
+import com.anomdev.makutoanepal.data.country.Topic
 import com.anomdev.makutoanepal.databinding.ItemTopicParentBinding
 
 class ParentRVAdapter(val topics: List<Topic>) :

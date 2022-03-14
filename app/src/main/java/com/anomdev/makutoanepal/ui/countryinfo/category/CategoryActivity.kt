@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.anomdev.makutoanepal.data.CategoryType
+import com.anomdev.makutoanepal.data.country.CategoryType
 import com.anomdev.makutoanepal.databinding.ActivityTopicListBinding
 
 const val EXTRA_CATEGORY = "EXTRA_CATEGORY"

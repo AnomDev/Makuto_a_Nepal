@@ -1,6 +1,6 @@
-package com.anomdev.makutoanepal.data
+package com.anomdev.makutoanepal.data.blogpost
 
-data class BlogPost (
+data class BlogPost(
     val image: String,
     val title: String,
     val date: String,

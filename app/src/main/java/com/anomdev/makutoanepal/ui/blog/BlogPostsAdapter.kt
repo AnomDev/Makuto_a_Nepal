@@ -5,10 +5,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.anomdev.makutoanepal.data.blogpost.BlogPost
 import com.anomdev.makutoanepal.databinding.ItemBlogPostBinding
-import com.anomdev.makutoanepal.data.BlogPost
 import com.anomdev.makutoanepal.ui.blog.detailpost.BlogPostDetailActivity
-import com.anomdev.makutoanepal.ui.blog.detailpost.EXTRA_BLOGPOST
 import com.bumptech.glide.Glide
 
 
@@ -38,7 +37,7 @@ class BlogPostsAdapter(private val blogPostsList: List<BlogPost>) :
 //            itemClickListener.OnItemClick()
 
             val intent = Intent(viewHolder.binding.root.context, BlogPostDetailActivity::class.java)
-         //TODO: Hay que pasar el objeto completo no cada elemento (parcelable)
+            //TODO: Hay que pasar el objeto completo no cada elemento (parcelable)
             intent.putExtra("imagePost", blogPostsList[position].image)
             intent.putExtra("titlePost", blogPostsList[position].title)
             intent.putExtra("bodyPost", blogPostsList[position].body)
@@ -49,7 +48,8 @@ class BlogPostsAdapter(private val blogPostsList: List<BlogPost>) :
 
     }
 
-    class BlogPostViewHolder(val binding: ItemBlogPostBinding) : RecyclerView.ViewHolder(binding.root) {
+    class BlogPostViewHolder(val binding: ItemBlogPostBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         val cardView = binding.topCardview
         fun render(feedList: BlogPost) {
             binding.postOnFeedTitleTv.text = feedList.title

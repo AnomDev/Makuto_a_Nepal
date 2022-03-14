@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.data
+package com.anomdev.makutoanepal.data.country
 
 import com.anomdev.makutoanepal.R
 import kotlinx.coroutines.delay

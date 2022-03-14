@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.data
+package com.anomdev.makutoanepal.data.country
 
 data class Topic(
     val name: String,

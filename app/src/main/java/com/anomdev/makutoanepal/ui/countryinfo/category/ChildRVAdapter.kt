@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.anomdev.makutoanepal.data.TopicElement
+import com.anomdev.makutoanepal.data.country.TopicElement
 import com.anomdev.makutoanepal.databinding.ItemTopicChildBinding
 import com.anomdev.makutoanepal.ui.countryinfo.detail.DetailActivity
 import com.anomdev.makutoanepal.ui.countryinfo.detail.EXTRA_IMAGE

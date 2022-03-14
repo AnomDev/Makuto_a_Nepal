@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.anomdev.makutoanepal.R
 import com.anomdev.makutoanepal.databinding.ActivityMainBinding
+import com.anomdev.makutoanepal.ui.blog.BlogPostsFragment
 import com.anomdev.makutoanepal.ui.business.BusinessListFragment
 import com.anomdev.makutoanepal.ui.countryinfo.CategoriesFragment
 import com.anomdev.makutoanepal.ui.map.MapFragment
-import com.anomdev.makutoanepal.ui.blog.BlogPostsFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -55,7 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         replaceFragment(homeFragment)
-        if(doubleBackToExitPressedOnce) {
+        if (doubleBackToExitPressedOnce) {
             val dialog = AlertDialog.Builder(this)
                 .setTitle(R.string.alert_dialog_exit_title)
                 .setMessage(R.string.alert_dialog_exit_message)
@@ -71,7 +73,9 @@ class MainActivity : AppCompatActivity() {
             dialog.show()
         }
         this.doubleBackToExitPressedOnce = true
-        Handler(Looper.getMainLooper()).postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+        Handler(Looper.getMainLooper()).postDelayed(Runnable {
+            doubleBackToExitPressedOnce = false
+        }, 2000)
 
     }
 }

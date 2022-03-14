@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.data
+package com.anomdev.makutoanepal.data.country
 
 data class TopicElement(
     val image: Int,

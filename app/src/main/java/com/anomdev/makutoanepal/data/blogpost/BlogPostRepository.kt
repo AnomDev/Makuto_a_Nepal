@@ -1,4 +1,4 @@
-package com.anomdev.makutoanepal.data
+package com.anomdev.makutoanepal.data.blogpost
 
 class BlogPostRepository(
     private val blogPostDataSource: BlogPostDataSource = BlogPostDataSourceImpl()

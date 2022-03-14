@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.anomdev.makutoanepal.data.Category
+import com.anomdev.makutoanepal.data.country.Category
 import com.anomdev.makutoanepal.databinding.ItemGridCountryfragmentBinding
-import com.anomdev.makutoanepal.ui.countryinfo.category.EXTRA_CATEGORY
 import com.anomdev.makutoanepal.ui.countryinfo.category.CategoryActivity
+import com.anomdev.makutoanepal.ui.countryinfo.category.EXTRA_CATEGORY
 import com.bumptech.glide.Glide
 
 

@@ -1,7 +1,7 @@
-package com.anomdev.makutoanepal.data
+package com.anomdev.makutoanepal.data.country
 
 class CountryRepository(
-    private val countryDataSource: CountryDataSource = CountryDataSourceImpl()
+    private val countryDataSource: CountryDataSource
 ) {
 
     /**

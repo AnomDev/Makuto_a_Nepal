@@ -1,9 +1,10 @@
 package com.anomdev.makutoanepal.ui.countryinfo.category
 
 import androidx.lifecycle.*
-import com.anomdev.makutoanepal.data.CategoryType
-import com.anomdev.makutoanepal.data.CountryRepository
-import com.anomdev.makutoanepal.data.Topic
+import com.anomdev.makutoanepal.data.country.CategoryType
+import com.anomdev.makutoanepal.data.country.CountryDataSourceImpl
+import com.anomdev.makutoanepal.data.country.CountryRepository
+import com.anomdev.makutoanepal.data.country.Topic
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -13,7 +14,7 @@ class CategoryViewModel(private val categoryType: CategoryType) : ViewModel() {
     val topics: LiveData<List<Topic>>
         get() = _topics
 
-    private val repo = CountryRepository()
+    private val repo = CountryRepository(CountryDataSourceImpl())
 
     init {
         viewModelScope.launch(Dispatchers.IO) {

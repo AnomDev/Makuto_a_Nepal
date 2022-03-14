@@ -4,13 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.anomdev.makutoanepal.data.Category
-import com.anomdev.makutoanepal.data.CountryRepository
+import com.anomdev.makutoanepal.data.country.Category
+import com.anomdev.makutoanepal.data.country.CountryRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CategoriesViewModel : ViewModel() {
-    private val repo = CountryRepository()
+@HiltViewModel
+class CategoriesViewModel @Inject constructor(private val repo: CountryRepository) : ViewModel() {
 
     private val _categories = MutableLiveData<List<Category>>()
 
