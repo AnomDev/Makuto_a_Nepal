@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.anomdev.makutoanepal.data.country.Category
 import com.anomdev.makutoanepal.databinding.ItemGridCountryfragmentBinding
 import com.anomdev.makutoanepal.ui.countryinfo.category.CategoryActivity
-import com.anomdev.makutoanepal.ui.countryinfo.category.EXTRA_CATEGORY
 import com.bumptech.glide.Glide
 
 
@@ -28,7 +27,7 @@ class CategoriesAdapter(private val categories: List<Category>) :
         //TODO this listener should be moved outside the adapter
         viewHolder.cardView.setOnClickListener {
             val intent = Intent(viewHolder.binding.root.context, CategoryActivity::class.java)
-            intent.putExtra(EXTRA_CATEGORY, categories[position].type)
+            intent.putExtra(CategoryActivity.EXTRA_CATEGORY, categories[position].type)
             startActivity(viewHolder.binding.root.context, intent, null)
         }
     }
