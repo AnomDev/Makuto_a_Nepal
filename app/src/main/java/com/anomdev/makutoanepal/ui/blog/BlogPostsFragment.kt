@@ -18,7 +18,6 @@ class BlogPostsFragment : Fragment() {
 
     private var _binding: FragmentBlogpostsBinding? = null
     private val binding get() = _binding!!
-
     private val viewModel: BlogPostsViewModel by viewModels()
 
     override fun onCreateView(
@@ -29,6 +28,7 @@ class BlogPostsFragment : Fragment() {
 
         binding.rvBlogPosts.layoutManager = LinearLayoutManager(requireContext())
 
+
         observeData()
         binding.progressBlogPosts.visibility = View.VISIBLE
 
@@ -38,7 +38,7 @@ class BlogPostsFragment : Fragment() {
     }
 
     private fun observeData() {
-                viewModel.blogPosts.observe(viewLifecycleOwner) { blogPosts ->
+        viewModel.blogPosts.observe(viewLifecycleOwner) { blogPosts ->
             val adapter = BlogPostsAdapter(blogPosts)
             binding.rvBlogPosts.adapter = adapter
             binding.progressBlogPosts.visibility = View.GONE

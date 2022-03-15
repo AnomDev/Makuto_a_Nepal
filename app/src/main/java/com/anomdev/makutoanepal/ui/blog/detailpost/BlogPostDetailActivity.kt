@@ -44,8 +44,9 @@ class BlogPostDetailActivity : AppCompatActivity() {
             val blogPost = intent.getParcelableExtra<BlogPost>(EXTRA_BLOGPOST)
                 ?: throw IllegalStateException("\"Blog post is not included in the intent")
 
-            with (blogPost){
-                Glide.with(this@BlogPostDetailActivity).load(image).into(binding.imageBlogPostDetail)
+            with(blogPost) {
+                Glide.with(this@BlogPostDetailActivity).load(image)
+                    .into(binding.imageBlogPostDetail)
                 binding.tvPostTitleDetailActivity.text = title
                 binding.tvDateActivityDetail.text = date
                 binding.tvBodyPostDetailActivity.text = body

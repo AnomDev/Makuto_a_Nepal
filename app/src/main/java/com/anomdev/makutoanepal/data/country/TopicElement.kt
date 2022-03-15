@@ -7,5 +7,5 @@ import kotlinx.android.parcel.Parcelize
 data class TopicElement(
     val image: Int,
     val title: String,
-    val subtitle: String
+    val body: String
 ): Parcelable

@@ -21,13 +21,13 @@ interface CountryDataSource {
  */
 class CountryDataSourceImpl : CountryDataSource {
     override suspend fun getCategories(): List<Category> {
-        delay(2000)
+        delay(1000)
         return retrieveCategories()
     }
 
 
     override suspend fun getTopicInformation(categoryType: CategoryType): List<Topic> {
-        delay(2000)
+        delay(1000)
         return when (categoryType) {
             CategoryType.CULTURE -> retrieveHistoryAndCulture()
             CategoryType.NATURE -> retrieveNature()
@@ -78,24 +78,43 @@ class CountryDataSourceImpl : CountryDataSource {
             "Historia",
             listOf(
                 TopicElement(
-                    R.drawable.silk_sea,
+                    R.drawable.history_ancient,
                     "Historia antigua",
-                    "Siglo IV a.e.c hasta s. VIII e.c."
+                    "Siglo IV a.e.c hasta s. VIII e.c." +
+                            "\n" +
+                            "\n" +
+                            "Aproximadamente entre el 450 y 750, en Nepal gobernó el reino " +
+                            "Licchavi;1\u200B las evidencias arqueológicas de este período " +
+                            "consisten en inscripciones en piedra.\n" +
+                            "\n" +
+                            "La mayoría de las inscripciones listan las fechas de fabricación y " +
+                            "comisionado de las construcciones en piedra, otras informan sobre " +
+                            "edictos reales, mantras religiosos o notas históricas; es gracias a " +
+                            "la corroboración de los mitos locales que se ha podido identificar a" +
+                            " un pueblo anterior a los licchavi, conocidos como los kirāṭa, " +
+                            "pueblo del que se sabe muy poco."
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
+                    R.drawable.history_medieval,
                     "Historia medieval",
-                    "Siglo IX e.c. hasta s.XVII e.c"
+                    "Siglo IX e.c. hasta s.XVII e.c" +
+                            "\n" +
+                            "\n" +
+                            "NO HAY INFO !!!"
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
+                    R.drawable.history_modern,
                     "Historia moderna",
                     "Siglo XVIII e.c. hasta s. XIX e.c"
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
+                    R.drawable.history_actual,
                     "Historia contemporánea",
-                    "Siglo XX e.c hasta nuestros días (dinastia rana, revolución de 1951, sistema panchayat, democracia, guerra civil, república y actualidad)"
+                    "Siglo XX e.c hasta nuestros días (dinastia rana, revolución de 1951, " +
+                            "sistema panchayat, democracia, guerra civil, república y actualidad)" +
+                            "\n" +
+                            "\n" +
+                            "AAAAAAAAAAA"
                 ),
             )
         ),
@@ -103,24 +122,61 @@ class CountryDataSourceImpl : CountryDataSource {
             "Cultura",
             listOf(
                 TopicElement(
-                    R.drawable.silk_sea,
+                    R.drawable.history_art,
                     "Arte",
-                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                    "Un thangka, también llamado Tangka, Thanka o Tanka (tibetano: ཐང་ཀ་, Nepal" +
+                            " Bhasa: पौभा) es un tapiz o bandera budista, de seda pintada o bordada." +
+                            " Suele colgarse en monasterios o altares familiares y ocasionalmente es" +
+                            " llevado por los monjes en procesiones ceremoniales religiosas." +
+                            "\n" +
+                            "\n" +
+                            "Originalmente, las pinturas thangka se hicieron populares entre los " +
+                            "monjes itinerantes ya que las pinturas en rollos eran fáciles de " +
+                            "transportar de monasterio en monasterio. Estos thangka eran importantes" +
+                            " herramientas de enseñanza, ya que mostraban escenas de la vida del " +
+                            "Buda, o a varios destacados Lamas, o a otras deidades o a Bodhisattva." +
+                            " Un tema popular de los thangka es La rueda de la vida, que es una " +
+                            "representación visual de las enseñanzas del Abhidharma (o Arte de la" +
+                            " Iluminación)" +
+                            "\n" +
+                            "\n" +
+                            "Mientras que para algunas personas estos son solo coloridos tapices, " +
+                            "para los budistas, estas pinturas religiosas tibetanas poseen una" +
+                            " belleza que se interpreta como una manifestación de ciertas energías " +
+                            "iluminadas, y por lo tanto son visualmente estimulantes."
+
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
+                    R.drawable.history_language,
                     "Lenguas",
-                    "Este es el body que pasará a la detail"
+                    "En Nepal se hablan más de 120 idiomas diferentes pero el idioma nacional" +
+                            ", el nepalés, es el más extensamente hablado. Se enseña en escuelas y" +
+                            " es usado por el gobierno. El nepalés también se habla en Bután, y " +
+                            "partes de la India y de Birmania." +
+                            "\n" +
+                            "\n" +
+                            " Incluye influencias del sánscrito y los idiomas tibéticos y birmanos " +
+                            "vecinos. También comparte similitudes con el hindi, que utiliza el " +
+                            "mismo estilo de escritura"
                 ),
                 TopicElement(
-                    R.drawable.silk_sea,
+                    R.drawable.history_religion,
                     "Religión",
-                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                    "De acuerdo con el censo del año 2001, el 81% de los habitantes son" +
+                            " hinduistas. Los budistas constituyen el 11%, los musulmanes el 4 % y" +
+                            " otras religiones el 3 %, también existen minorías de ateos y cristianos."
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
+                    R.drawable.history_specialdays,
                     "Festividades",
-                    "Este es el body que pasará a la detail"
+                    "Indra Jātrā es el festival callejero religioso más grande de Katmandú " +
+                            "\n" +
+                            "\n" +
+                            "Las celebraciones consisten en dos eventos, Indra Jātrā y Kumāri Jātrā." +
+                            "Indra Jātrā está marcado por bailes enmascarados de deidades y demonios, " +
+                            "exhibiciones de imágenes sagradas y cuadros en honor a la deidad Indra, " +
+                            "el rey del cielo. Kumāri Jātrā es la procesión de carros de la diosa" +
+                            "viviente Kumari."
                 )
             )
         )
@@ -136,7 +192,11 @@ class CountryDataSourceImpl : CountryDataSource {
                     TopicElement(
                         R.drawable.cte_poi_sitapaila,
                         "Sitapaila",
-                        "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                        "Sitapaila es una aldea (antiguamente miembro del Comité por el " +
+                                "Desarrollo de los Pueblos) que ahora forma parte del Municipio de" +
+                                " Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento" +
+                                " del censo de 1991, Nepal tenía una población de 5156 habitantes y" +
+                                " 1008 hogares"
                     ),
                     TopicElement(
                         R.drawable.cte_poi_tergar,
@@ -239,32 +299,61 @@ class CountryDataSourceImpl : CountryDataSource {
 
     private fun retrieveNature() = listOf(
         Topic(
-            "Montanias",
+            "Fauna",
             listOf(
                 TopicElement(
-                    R.drawable.silk_sea,
-                    "Montanias1",
-                    "Siglo IV a.e.c hasta s. VIII e.c."
+                    R.drawable.nature_pantera,
+                    "Pantera nebulosa",
+                    "La pantera nebulosa o leopardo longibando (Neofelis nebulosa) es una de " +
+                            "las dos especies de félidos pertenecientes al género Neofelis. " +
+                            "\n" +
+                            "\n" +
+                            "Tiene una longitud de 60 a 110 cm; las hembras un peso de 11 a 20 kg y " +
+                            "los machos hasta 65 kg. De hábitos arborícolas, esta especie es una " +
+                            "excelente trepadora que se mueve ágilmente por las ramas gracias a su " +
+                            "larga cola que actúa a modo de balancín. El pelaje está cubierto de " +
+                            "grandes manchas irregulares de borde negro e interior pardo, lo que" +
+                            " ayuda a la pantera nebulosa a confundirse entre las hojas. " +
+                            "\n" +
+                            "\n" +
+                            "Su nombre procede precisamente de estas manchas, de forma parecida a una nube."
+
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Montanias2",
-                    "Siglo IX e.c. hasta s.XVII e.c"
+                    R.drawable.nature_yak,
+                    "Yak",
+                    "El yak (Bos mutus o Bos grunniens) es un mamífero bóvido de " +
+                            "tamaño mediano y pelaje lanoso, nativo de las montañas de Asia " +
+                            "Central y el Himalaya, vive en las altiplanicies esteparias y fríos " +
+                            "desiertos del Nepal, Tíbet, Pamir y Karakórum, entre los 4000 y " +
+                            "6000 metros de altitud, donde se encuentra tanto en estado salvaje " +
+                            "como doméstico."
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Montanias3",
-                    "Siglo XVIII e.c. hasta s. XIX e.c"
+                    R.drawable.nature_rhyno,
+                    "Rinoceronte indio",
+                    "El rinoceronte indio (Rhinoceros unicornis) es una especie de mamífero " +
+                            "perisodáctilo de la familia Rhinocerotidae, una de las tres especies " +
+                            "de rinoceronte que existen actualmente en Asia. Las otras son el" +
+                            " rinoceronte de Java, con la que está estrechamente emparentada, " +
+                            "y el raro rinoceronte de Sumatra."
                 )
             )
         ),
         Topic(
-            "Bosques",
+            "Flora",
             listOf(
                 TopicElement(
-                    R.drawable.silk_sea,
-                    "Bosque1",
-                    "Sitapaila es una aldea (antiguamente miembro del Comité por el Desarrollo de los Pueblos) que ahora forma parte del Municipio de Nagarjun en la Provincia No. 3 del centro de Nepal. En el momento del censo de 1991, Nepal tenía una población de 5156 habitantes y 1008 hogares"
+                    R.drawable.nature_rododendro,
+                    "Rododendro",
+                    "Rhododendron arboreum, también denominado burans o laligurans o " +
+                            "simplemente gurans (en nepalí, गुराँस) en Nepal, es un arbusto " +
+                            "siempreverde o árbol pequeño con una fronda florida de flores " +
+                            "rojo brillante." +
+                            "\n" +
+                            "\n" +
+                            " Es propio de Bután, China, India, Myanmar, Sri Lanka, Pakistán " +
+                            "y Tailandia pero también existe, y de hecho es la flor nacional, en Nepal."
                 ),
                 TopicElement(
                     R.drawable.bluegridbackground,
@@ -285,18 +374,18 @@ class CountryDataSourceImpl : CountryDataSource {
             "Trekking",
             listOf(
                 TopicElement(
-                    R.drawable.silk_sea,
-                    "Trekking1",
+                    R.drawable.trek_poon,
+                    "Ghorepani-Poon Hill",
                     "Siglo IV a.e.c hasta s. VIII e.c."
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Trekking2",
+                    R.drawable.trek_ebc,
+                    "Everest Base Camp",
                     "Siglo IX e.c. hasta s.XVII e.c"
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Trekking3",
+                    R.drawable.trek_abc,
+                    "Annapurna Base Camp",
                     "Siglo XVIII e.c. hasta s. XIX e.c"
                 )
             )
@@ -308,28 +397,28 @@ class CountryDataSourceImpl : CountryDataSource {
             "Comida",
             listOf(
                 TopicElement(
-                    R.drawable.silk_sea,
-                    "Comida1",
+                    R.drawable.gastronomy_momo,
+                    "Momo",
                     "Siglo IV a.e.c hasta s. VIII e.c."
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Comida2",
+                    R.drawable.gastronomy_choila,
+                    "Choila",
                     "Siglo IX e.c. hasta s.XVII e.c"
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Comida3",
+                    R.drawable.gastronomy_chaang,
+                    "Chaang",
                     "Siglo XVIII e.c. hasta s. XIX e.c"
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Comida4",
+                    R.drawable.gastronomy_chutney,
+                    "Vanko chutney",
                     "Siglo XVIII e.c. hasta s. XIX e.c"
                 ),
                 TopicElement(
-                    R.drawable.bluegridbackground,
-                    "Comida5",
+                    R.drawable.gastronomy_naan,
+                    "Naan",
                     "Siglo XVIII e.c. hasta s. XIX e.c"
                 )
             )

@@ -6,7 +6,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cvElementTopicList"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_margin="@dimen/doubleMinimunDimen"
         app:cardCornerRadius="@dimen/cardCornerRadius"
@@ -14,14 +14,15 @@
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/primary_light"
             android:layout_gravity="left|top">
 
             <ImageView
                 android:id="@+id/ivImageElementCountryTopic"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:src="@drawable/silk_sea"

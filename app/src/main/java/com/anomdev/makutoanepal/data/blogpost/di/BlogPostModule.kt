@@ -16,7 +16,7 @@ class BlogPostModule {
 
     @Provides
     @Singleton
-    fun provideBlogpostDataSource(): BlogPostDataSource{
+    fun provideBlogpostDataSource(): BlogPostDataSource {
         return BlogPostDataSourceImpl()
     }
 

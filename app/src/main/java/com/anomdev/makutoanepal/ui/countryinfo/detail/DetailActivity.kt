@@ -1,14 +1,11 @@
 package com.anomdev.makutoanepal.ui.countryinfo.detail
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.anomdev.makutoanepal.data.country.TopicElement
 import com.anomdev.makutoanepal.databinding.ActivityCountryElementDetailBinding
 import com.bumptech.glide.Glide
-import com.google.android.gms.maps.MapFragment
 
 class DetailActivity : AppCompatActivity() {
 
@@ -24,7 +21,7 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityCountryElementDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        onMapButtonPressed()
+//        onMapButtonPressed()
 
 
         if (intent.extras != null) {
@@ -36,7 +33,7 @@ class DetailActivity : AppCompatActivity() {
                 Glide.with(this@DetailActivity).load(image)
                     .into(binding.ivImageCountryElementDetail)
                 binding.tvTitleCountryElement.text = title
-                binding.tvBodyCountryElementDetail.text = subtitle
+                binding.tvBodyCountryElementDetail.text = body
             }
 
 
@@ -49,13 +46,13 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun onMapButtonPressed() {
+    /*private fun onMapButtonPressed() {
         binding.btnViewMap.setOnClickListener {
             //TODO: Esto falla principalmente porque no es una Activity a donde vamos, sino un fragment
             val intent = Intent(this, MapFragment::class.java)
             ContextCompat.startActivity(this, intent, null)
         }
-    }
+    }*/
 
     private fun onBackButtonPressed() {
         finish()

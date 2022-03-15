@@ -37,8 +37,12 @@ class CategoryActivity : AppCompatActivity() {
         binding.parentRecyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
+        //TODO · Debería mostrarme el string del nombre, no "la etiqueta"
+        binding.tvTitleTopicDetail.text = category.name
+
         viewModel.topics.observe(this) { topics ->
             val parentAdapter = ParentRVAdapter(topics)
+
             binding.parentRecyclerView.adapter = parentAdapter
             binding.progressCategory.visibility = View.GONE
 

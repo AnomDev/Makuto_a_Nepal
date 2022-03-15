@@ -25,15 +25,36 @@ private fun retrieveBlogPosts(): List<BlogPost> {
             "https://alongthisjourneyblog.files.wordpress.com/2015/11/p1160462.jpg",
             "La infancia en la región montañosa de Nepal",
             "13/01/2022",
-            "Nepal tiene parte de la cordillera del Himalaya, la cordillera más alta del mundo. Ocho de los catorce ochomiles se encuentran en el país, ya sea en forma total o compartida a través de una frontera con el Tíbet o India.\n" +
+            "Nepal tiene parte de la cordillera del Himalaya, la cordillera más alta del mundo" +
+                    ". Ocho de los catorce ochomiles se encuentran en el país, ya sea en forma total" +
+                    " o compartida a través de una frontera con el Tíbet o India.\n" +
                     "\n" +
-                    "Al norte de los Grandes Himalaya, en el oeste de Nepal, las cordilleras fronterizas tibetanas (Tibetan Border Ranges) de unos 6000 m, forman la divisoria de las cuencas de los ríos Ganges-Brahmaputra, que en general sigue la frontera internacional. Al sur de los Grandes Himalayas, Nepal tiene una región de alta montaña, con cumbres de unos 4000 m; siguen a continuación, las Middle Hills y la cordillera Mahabharat, con cimas de 1500 a 3000 m. Al sur de los Mahabharats, una hay una cordillera exterior con cumbres de unos 1000 m, llamada los Siwaliks o Churiya Hills. Esta lista recoge las montañas y picos más altos de Nepal en el territorio nacional de Nepal, incluidas todas las elevaciones con una prominencia de al menos 150 m. La lista está completa en el rango de 6900 a 8848 metros sobre el nivel del mar . Ocho de cada 14 ochomiles se encuentran, al menos parcialmente, en Nepal. Otros 36 picos principales alcanzan una altura de más de 7000 m."
+                    "Al norte de los Grandes Himalaya, en el oeste de Nepal, las cordilleras " +
+                    "fronterizas tibetanas (Tibetan Border Ranges) de unos 6000 m, forman la" +
+                    " divisoria de las cuencas de los ríos Ganges-Brahmaputra, que en general" +
+                    " sigue la frontera internacional. Al sur de los Grandes Himalayas, Nepal " +
+                    "tiene una región de alta montaña, con cumbres de unos 4000 m; siguen a" +
+                    " continuación, las Middle Hills y la cordillera Mahabharat, con cimas de" +
+                    " 1500 a 3000 m. Al sur de los Mahabharats, una hay una cordillera exterior" +
+                    " con cumbres de unos 1000 m, llamada los Siwaliks o Churiya Hills. Esta lista" +
+                    " recoge las montañas y picos más altos de Nepal en el territorio nacional de" +
+                    " Nepal, incluidas todas las elevaciones con una prominencia de al menos 150 m." +
+                    " La lista está completa en el rango de 6900 a 8848 metros sobre el nivel del mar " +
+                    ". Ocho de cada 14 ochomiles se encuentran, al menos parcialmente, en Nepal. " +
+                    "Otros 36 picos principales alcanzan una altura de más de 7000 m."
         ),
         BlogPost(
             "https://www.publico.es/uploads/2016/05/18/573c0f92e7307.jpg",
             "Carlos Soria: \"Voy a intentar no hardcodear textos\"",
             "01/01/2022",
-            "Carlos Soria Fontán (Ávila, 5 de febrero de 1939)1\u200B es un alpinista español que, con más de 80 años, está inmerso en el reto de ser la persona de más edad en alcanzar la cumbre de las 14 montañas más altas del mundo.2\u200B Es el único alpinista que ha escalado diez montañas de más de 8000 metros después de cumplir los 60 años, y es la persona más veterana en la historia que ha ascendido con éxito al K2 (65 años), Broad Peak (68 años), Makalu (69 años), Gasherbrum I (70 años), Manaslu (71 años), Kanchenjunga (75 años) y Annapurna (77 años)." +
+            "Carlos Soria Fontán (Ávila, 5 de febrero de 1939)1\u200B es un alpinista español " +
+                    "que, con más de 80 años, está inmerso en el reto de ser la persona de más edad " +
+                    "en alcanzar la cumbre de las 14 montañas más altas del mundo.2\u200B Es el" +
+                    " único alpinista que ha escalado diez montañas de más de 8000 metros después " +
+                    "de cumplir los 60 años, y es la persona más veterana en la historia que ha " +
+                    "ascendido con éxito al K2 (65 años), Broad Peak (68 años), Makalu (69 años)," +
+                    " Gasherbrum I (70 años), Manaslu (71 años), Kanchenjunga (75 años) y " +
+                    "Annapurna (77 años)." +
                     "Por orden cronológico: 5\u200B\n" +
                     "\n" +
                     "Nanga Parbat (8125 m), Pakistán, 1990\n" +
@@ -48,33 +69,69 @@ private fun retrieveBlogPosts(): List<BlogPost> {
                     "Lhotse (8516 m), China/Nepal, 2011\n" +
                     "Kanchenjunga (8586 m), Nepal, 20146\u200B\n" +
                     "Annapurna (8091 m), Nepal, 20167\u200B\n" +
-                    "Asimismo, cabe destacar que, en 2005,8\u200B Carlos Soria ascendió a la cumbre central del Shisha Pangma en el Tíbet. Sin embargo, dicha cumbre no se suele tener en cuenta en su historial de ochomiles debido a que su altitud es inferior a la cumbre principal de la montaña (8027 m) y a que hay discrepancias respecto a la verdadera altitud de dicha cumbre central (según diversas fuentes se ha medido en 7999, 8008 y 8013 metros).\n" +
+                    "Asimismo, cabe destacar que, en 2005,8\u200B Carlos Soria ascendió a la " +
+                    "cumbre central del Shisha Pangma en el Tíbet. Sin embargo, dicha cumbre no se " +
+                    "suele tener en cuenta en su historial de ochomiles debido a que su altitud es " +
+                    "inferior a la cumbre principal de la montaña (8027 m) y a que hay discrepancias" +
+                    " respecto a la verdadera altitud de dicha cumbre central (según diversas " +
+                    "fuentes se ha medido en 7999, 8008 y 8013 metros).\n" +
                     "\n" +
-                    "En octubre de 2013 volvió intentar el ascenso a la cumbre central del Shisha Pangma pero tuvo que dejár la ascensión debido a las malas condiciones meteorológicas.9\u200B\n" +
+                    "En octubre de 2013 volvió intentar el ascenso a la cumbre central del Shisha " +
+                    "Pangma pero tuvo que dejár la ascensión debido a las malas condiciones" +
+                    " meteorológicas.9\u200B\n" +
                     "\n" +
-                    "Según él mismo ha anunciado, volverá a intentar subir a la cumbre central del Shisha Pangma en septiembre del 2021.10\u200B"
+                    "Según él mismo ha anunciado, volverá a intentar subir a la cumbre central " +
+                    "del Shisha Pangma en septiembre del 2021.10\u200B"
         ),
         BlogPost(
             "https://alongthisjourneyblog.files.wordpress.com/2016/01/img-20151016-wa0011.jpg",
             "Los sadhus, eremitas que se entregan a la fe",
             "24/12/2021",
-            "Un sadhu (Saa-dhu) es un asceta hindú o un monje que sigue el camino de la penitencia y la austeridad para obtener la iluminación y la felicidad.\n" +
+            "Un sadhu (Saa-dhu) es un asceta hindú o un monje que sigue el camino de la " +
+                    "penitencia y la austeridad para obtener la iluminación y la felicidad.\n" +
                     "\n" +
-                    "Es la cuarta fase de la vida en la religión hindú, después de estudiar, de ser padre y de ser peregrino. La tradición sadhu consiste en renunciar a todos los vínculos que los unen a lo terrenal o material en la búsqueda de los verdaderos valores de la vida. Por norma general, un sahdu vive incluido en la sociedad, pero intenta ignorar los placeres y dolores humanos.\n" +
+                    "Es la cuarta fase de la vida en la religión hindú, después de estudiar, " +
+                    "de ser padre y de ser peregrino. La tradición sadhu consiste en renunciar " +
+                    "a todos los vínculos que los unen a lo terrenal o material en la búsqueda" +
+                    " de los verdaderos valores de la vida. Por norma general, un sahdu vive incluido " +
+                    "en la sociedad, pero intenta ignorar los placeres y dolores humanos.\n" +
                     "\n" +
-                    "Muchos sadhus imitan la vida mitológica de Shiva, el principal de todos los ascetas. Llevan un tridente simbólico y se pintan tres rayas de ceniza en su frente para representar los tres aspectos de Shiva en su búsqueda asceta para destruir las tres impurezas (egoísmo, acción con deseo y el maya). Llevan túnicas de color azafrán, que significan que han sido bendecidos con la sangre fértil de Parvati, la consorte de Shiva.\n" +
+                    "Muchos sadhus imitan la vida mitológica de Shiva, el principal de todos los" +
+                    " ascetas. Llevan un tridente simbólico y se pintan tres rayas de ceniza en su" +
+                    " frente para representar los tres aspectos de Shiva en su búsqueda asceta para " +
+                    "destruir las tres impurezas (egoísmo, acción con deseo y el maya). Llevan " +
+                    "túnicas de color azafrán, que significan que han sido bendecidos con la sangre" +
+                    " fértil de Parvati, la consorte de Shiva.\n" +
                     "\n" +
-                    "Dedican la mayor parte de su tiempo a la meditación. Muchos de estos se reúnen en determinadas fiestas como es el Kumbhamela.\n" +
+                    "Dedican la mayor parte de su tiempo a la meditación. Muchos de estos se " +
+                    "reúnen en determinadas fiestas como es el Kumbhamela.\n" +
                     "\n" +
-                    "Los sadhus son la respuesta en India para el sistema de valores. Han dejado atrás todas las ataduras materiales para liberarse a un mundo con la realidad divina, y viven en cuevas, bosques y templos por toda la India. Existen alrededor de 4 o 5 millones de sadhus hoy en día en el país, y son personas respetadas, veneradas e incluso temidas. Son mantenidos por todos los ciudadanos que les donan alimentos.\n" +
+                    "Los sadhus son la respuesta en India para el sistema de valores. Han dejado " +
+                    "atrás todas las ataduras materiales para liberarse a un mundo con la realidad" +
+                    " divina, y viven en cuevas, bosques y templos por toda la India. Existen" +
+                    " alrededor de 4 o 5 millones de sadhus hoy en día en el país, y son personas " +
+                    "respetadas, veneradas e incluso temidas. Son mantenidos por todos los ciudadanos" +
+                    " que les donan alimentos.\n" +
                     "\n" +
                     "\n" +
                     "Sadhu con su discípulo.\n" +
-                    "Hay muchas clases de sadhus. Dentro de los sadhus, los Nagas son los más prominentes ya que se mantienen desnudos, cubiertos solamente con un \"vibhuti\" o cenizas sagradas. Dejan crecer su pelo en bucles llamados jata.\n" +
+                    "Hay muchas clases de sadhus. Dentro de los sadhus, los Nagas son los más" +
+                    " prominentes ya que se mantienen desnudos, cubiertos solamente con un " +
+                    "\"vibhuti\" o cenizas sagradas. Dejan crecer su pelo en bucles llamados jata.\n" +
                     "\n" +
-                    "Los sadhus se dividen en tres principales \"akharas\" o denominaciones, las cuales fueron establecidas en el siglo VIII por el sabio Adi Shankaracharya. Este estableció cuatro \"maths\" o centros en las cuatro puntas extremas de India. En estos akharas, los sadhus aprenden el control de la mente y del cuerpo hasta ser maestros del yoga.\n" +
+                    "Los sadhus se dividen en tres principales \"akharas\" o denominaciones, " +
+                    "las cuales fueron establecidas en el siglo VIII por el sabio Adi Shankaracharya." +
+                    " Este estableció cuatro \"maths\" o centros en las cuatro puntas extremas " +
+                    "de India. En estos akharas, los sadhus aprenden el control de la mente y " +
+                    "del cuerpo hasta ser maestros del yoga.\n" +
                     "\n" +
-                    "Los sadhus generalmente pasan el primer año de su vida, después de la renuncia a lo mundano, con sus gurus o maestros. Los sadhus tradicionales se rapan el cráneo como un signo de renuncia. Una vez que hayan aprendido las artes espirituales y de yoga, tienen que dejar al guru para caminar por las calles y bosques, nunca quedándose en un solo lugar ya que creen que moverse mantiene al cuerpo en alerta, mientras que quedarse en un lugar los hace inactivos."
+                    "Los sadhus generalmente pasan el primer año de su vida, después de la" +
+                    " renuncia a lo mundano, con sus gurus o maestros. Los sadhus tradicionales " +
+                    "se rapan el cráneo como un signo de renuncia. Una vez que hayan aprendido " +
+                    "las artes espirituales y de yoga, tienen que dejar al guru para caminar por " +
+                    "las calles y bosques, nunca quedándose en un solo lugar ya que creen que" +
+                    " moverse mantiene al cuerpo en alerta, mientras que quedarse en un lugar los" +
+                    "hace inactivos."
         ),
 
         BlogPost(

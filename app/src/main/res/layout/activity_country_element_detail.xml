@@ -47,9 +47,9 @@
         <ImageView
             android:id="@+id/ivImageCountryElementDetail"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="300dp"
             android:layout_margin="@dimen/tripleMinimunDimen"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/silk_sea" />
 
@@ -69,7 +69,7 @@
                 android:layout_marginBottom="@dimen/minimunDimen"
                 android:gravity="start"
                 android:justificationMode="inter_word"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
 
         </ScrollView>
 
-        <com.google.android.material.button.MaterialButton
+<!--        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnViewMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
             android:elevation="@dimen/minimunDimen"
             android:text="See on map"
             android:textColor="@color/secondary"
-            android:textSize="@dimen/doubleMinimunDimen" />
+            android:textSize="@dimen/doubleMinimunDimen" />-->
 
     </LinearLayout>
 
